@@ -1,0 +1,3488 @@
+<!DOCTYPE html>
+<html
+  class="js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths"
+  lang="es"
+  style="overflow-y: auto"
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <title>
+      Reconocimiento Automático de Matrículas - ALPR de Alta Precisión
+    </title>
+    <link
+      async=""
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/reconocedor-de-matriculas-base.css"
+      data-rocket-async="style"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+      media="all"
+      data-minify="1"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/reconocedor-de-matriculas-custom.css"
+      data-rocket-async="style"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+      media="all"
+      data-minify="1"
+    />
+    <meta
+      name="description"
+      content="ALPR Software - Reconocedor de Matrículas. Preciso, Rápido, Developer-Friendly. Funciona en la oscuriudad, y en imágenes borrosas."
+    />
+    <meta
+      name="robots"
+      content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    />
+    <link rel="canonical" href="https://.com/" />
+    <meta property="og:locale" content="es" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Reconocimiento Automático de Matrículas - ALPR de Alta Precisión"
+    />
+    <meta
+      property="og:description"
+      content="ALPR Software - Reconocedor de Matrículas. Preciso, Rápido, Developer-Friendly. Funciona en la oscuriudad, y en imágenes borrosas."
+    />
+    <meta property="og:url" content="https://.com/" />
+    <meta property="og:site_name" content="Reconocedor de Matrículas" />
+    <meta
+      property="article:modified_time"
+      content="2021-01-16T21:43:13+00:00"
+    />
+    <meta
+      property="og:image"
+      content="assets/images/anpr/section-1-examples/ALPR-baja-resolucion.webp"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:label1" content="Est. reading time" />
+    <meta name="twitter:data1" content="56 minutes" />
+    <script
+      type="text/javascript"
+      async=""
+      src="https://www.google-analytics.com/analytics.js"
+    ></script>
+    <script
+      async=""
+      src="https://www.googletagmanager.com/gtm.js?id=G-055LWJG7VJ"
+    ></script>
+
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="//www.google-analytics.com" />
+    <link rel="dns-prefetch" href="//googletagmanager.com" />
+    <link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com" />
+    <link href="https://fonts.gstatic.com" crossorigin="" rel="preconnect" />
+
+    <!-- Montserrat font -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat%3A600%2C400%2C500%7CRoboto%3A400&ver=1.0&display=swap"
+      data-rocket-async="style"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+      type="text/css"
+      media="all"
+    />
+    <!-- jQuery -->
+
+    <!-- jQuery CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- jQuery local fallback -->
+    <script>
+      window.jQuery ||
+        document.write(
+          '<script src="assets/js/jquery-3.5.1.min.js"><\/script>'
+        );
+    </script>
+
+    <link rel="shortlink" href="https://reconocematriculas.com/" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <!-- logos links -->
+    <!-- todos los siguientes href de logos antes eran este: -->
+    <!-- assets/images/anpr/logos/plate-recognizer-alpr-anpr-logo-prev.png -->
+    <link
+      rel="icon"
+      href="assets/images/anpr/logos/plate-recognizer-alpr-anpr-logo.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      href="assets/images/anpr/logos/plate-recognizer-alpr-anpr-logo.png"
+      sizes="192x192"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="assets/images/anpr/logos/plate-recognizer-alpr-anpr-logo.png"
+    />
+    <meta
+      name="msapplication-TileImage"
+      content="assets/images/anpr/logos/plate-recognizer-alpr-anpr-logo.png"
+    />
+  </head>
+
+  <body
+    data-rsssl="1"
+    class="home page-template-default page page-id-11"
+    data-be-page-template="page"
+    style="overflow-y: auto"
+  >
+    <div id="tatsu-header-container">
+      <div id="tatsu-header-wrap" class="solid dark">
+        <div
+          class="tatsu-header default sticky apply-color-scheme tatsu-rj6GDYF-K0"
+          data-padding='{"d":"15px 0px 15px 0px"}'
+          data-sticky-padding='{"d":"15px 0px 15px 0px"}'
+        >
+          <div class="tatsu-header-row tatsu-wrap">
+            <div class="tatsu-header-col tatsu-YnDgFlxLk">
+              <div
+                class="tatsu-header-logo tatsu-header-module tatsu-_WiV4whqQ"
+              >
+                <!-- LOGO LANDING PAGE  -->
+                <a href="https://reconocematriculas.com"
+                  ><img
+                    src="assets/images/anpr/logos/Plate-Recognizer-ALPR-license-plate-recognition-logo-not-purple.png"
+                    class="logo-img default-logo lazyloaded"
+                    alt="ALPR Reconocedor de Matrículas logo"
+                    data-ll-status="loaded" /><noscript
+                    ><img
+                      src="assets/images/anpr/logos/Plate-Recognizer-ALPR-license-plate-recognition-not-logo-purple.png"
+                      class="logo-img default-logo"
+                      alt="ALPR Reconocedor de Matrículas logo" /></noscript
+                  ><img
+                    src="assets/images/anpr/logos/Plate-Recognizer-ALPR-license-plate-recognition-not-logo-purple.png"
+                    class="logo-img dark-logo lazyloaded"
+                    alt="ALPR Reconocedor de Matrículas logo"
+                    data-ll-status="loaded" /><noscript
+                    ><img
+                      src="assets/images/anpr/logos/Plate-Recognizer-ALPR-license-plate-recognition-not-logo-purple.png"
+                      class="logo-img dark-logo"
+                      alt="ALPR Reconocedor de Matrículas logo" /></noscript
+                  ><img
+                    src="assets/images/anpr/logos/Plate-Recognizer-ANPR-logo-white.png"
+                    class="logo-img light-logo lazyloaded"
+                    alt="ALPR logo"
+                    data-ll-status="loaded" /><noscript
+                    ><img
+                      src="assets/images/anpr/logos/Plate-Recognizer-ANPR-logo-white.png"
+                      class="logo-img light-logo"
+                      alt="ALPR logo" /></noscript
+                ></a>
+              </div>
+            </div>
+            <div class="tatsu-header-col tatsu-JkgejyqoMQ">
+              <nav class="tatsu-header-module tatsu-header-navigation clearfix">
+                <div class="tatsu-menu tatsu-aq29a-9Kw">
+                  <ul
+                    id="menu-aq29a-9Kw"
+                    class="clearfix sf-js-enabled sf-arrows"
+                  >
+                    <li
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-15"
+                    >
+                      <a title="Products" href="#" class="sf-with-ul"
+                        >Productos</a
+                      >
+                      <span class="sub-menu-indicator"
+                        ><svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="10"
+                          height="6"
+                          viewBox="0 0 10 6"
+                        >
+                          <polyline
+                            fill="none"
+                            stroke="#2F2F30"
+                            stroke-linecap="round"
+                            stroke-width="2"
+                            points="0 .649 3.613 4.127 0 7.604"
+                            transform="rotate(90 4 5)"
+                          ></polyline>
+                        </svg>
+                      </span>
+                      <ul
+                        class="tatsu-sub-menu clearfix"
+                        style="display: none; top: 45px"
+                      >
+                        <span class="tatsu-header-pointer"></span>
+                        <li
+                          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-226"
+                        >
+                          <a
+                            title="Snapshot"
+                            href="https://reconocematriculas.com/snapshot/"
+                            >Snapshot</a
+                          >
+                        </li>
+                        <li
+                          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-623"
+                        >
+                          <a title="Stream" href="https://reconocematriculas.com/stream/"
+                            >Stream</a
+                          >
+                        </li>
+                        <li
+                          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-622"
+                        >
+                          <a title="Blur" href="https://reconocematriculas.com/blur/"
+                            >Borroso</a
+                          >
+                        </li>
+                        <li
+                          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1048"
+                        >
+                          <a
+                            title="ALPR Dashboard"
+                            href="https://reconocematriculas.com/alpr-dashboard/"
+                            >ALPR Panel de Control</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li
+                      class="menu-item menu-item-type-post_type menu-item-object-page menu-item-344"
+                    >
+                      <a title="Pricing" href="https://reconocematriculas.com/pricing/"
+                        >Precios</a
+                      >
+                    </li>
+                    <li
+                      class="menu-item menu-item-type-post_type menu-item-object-page menu-item-321"
+                    >
+                      <a title="Blog" href="https://reconocematriculas.com/blog/">Blog</a>
+                    </li>
+                    <li
+                      class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1286"
+                    >
+                      <a
+                        title="Help"
+                        href="https://reconocematriculas.com/help/"
+                        class="sf-with-ul"
+                        >Ayuda</a
+                      >
+                      <span class="sub-menu-indicator"
+                        ><svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="10"
+                          height="6"
+                          viewBox="0 0 10 6"
+                        >
+                          <polyline
+                            fill="none"
+                            stroke="#2F2F30"
+                            stroke-linecap="round"
+                            stroke-width="2"
+                            points="0 .649 3.613 4.127 0 7.604"
+                            transform="rotate(90 4 5)"
+                          ></polyline>
+                        </svg>
+                      </span>
+                      <ul
+                        class="tatsu-sub-menu clearfix"
+                        style="display: none; top: 45px"
+                      >
+                        <span class="tatsu-header-pointer"></span>
+                        <li
+                          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1310"
+                        >
+                          <a title="Help Center" href="https://reconocematriculas.com/help/"
+                            >Centro de Ayuda</a
+                          >
+                        </li>
+                        <li
+                          class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22"
+                        >
+                          <a title="API Docs" href="http://docs.reconocematriculas.com/"
+                            >API Docs</a
+                          >
+                        </li>
+                        <li
+                          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-756"
+                        >
+                          <a
+                            title="Integrations"
+                            href="https://reconocematriculas.com/integrations/"
+                            >Integraciones</a
+                          >
+                        </li>
+                        <li
+                          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1317"
+                        >
+                          <a title="Docker" href="https://reconocematriculas.com/docker/"
+                            >Docker</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li
+                      class="menu-item menu-item-type-post_type menu-item-object-page menu-item-755"
+                    >
+                      <a title="Contact" href="https://reconocematriculas.com/contact/"
+                        >Contacto</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+              <div class="tatsu-header-module tatsu-mobile-navigation">
+                <div class="tatsu-mobile-menu tatsu-aq29a-9Kw">
+                  <ul id="menu-aq29a-9Kw" class="clearfix">
+                    <li
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-15"
+                    >
+                      <a title="Products" href="#">Productos</a>
+                      <span class="sub-menu-indicator"
+                        ><svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="10"
+                          height="6"
+                          viewBox="0 0 10 6"
+                        >
+                          <polyline
+                            fill="none"
+                            stroke="#2F2F30"
+                            stroke-linecap="round"
+                            stroke-width="2"
+                            points="0 .649 3.613 4.127 0 7.604"
+                            transform="rotate(90 4 5)"
+                          ></polyline>
+                        </svg>
+                      </span>
+                      <ul class="tatsu-sub-menu clearfix">
+                        <li
+                          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-226"
+                        >
+                          <a
+                            title="Snapshot"
+                            href="https://reconocematriculas.com/snapshot/"
+                            >Snapshot</a
+                          >
+                        </li>
+                        <li
+                          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-623"
+                        >
+                          <a title="Stream" href="https://reconocematriculas.com/stream/"
+                            >Stream</a
+                          >
+                        </li>
+                        <li
+                          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-622"
+                        >
+                          <a title="Blur" href="https://reconocematriculas.com/blur/"
+                            >Borroso</a
+                          >
+                        </li>
+                        <li
+                          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1048"
+                        >
+                          <a
+                            title="ALPR Dashboard"
+                            href="https://reconocematriculas.com/alpr-dashboard/"
+                            >ALPR Panel de Control</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li
+                      class="menu-item menu-item-type-post_type menu-item-object-page menu-item-344"
+                    >
+                      <a title="Pricing" href="https://reconocematriculas.com/pricing/"
+                        >Precios</a
+                      >
+                    </li>
+                    <li
+                      class="menu-item menu-item-type-post_type menu-item-object-page menu-item-321"
+                    >
+                      <a title="Blog" href="https://reconocematriculas.com/blog/">Blog</a>
+                    </li>
+                    <li
+                      class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1286"
+                    >
+                      <a title="Help" href="https://reconocematriculas.com/help/">Ayuda</a>
+                      <span class="sub-menu-indicator"
+                        ><svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="10"
+                          height="6"
+                          viewBox="0 0 10 6"
+                        >
+                          <polyline
+                            fill="none"
+                            stroke="#2F2F30"
+                            stroke-linecap="round"
+                            stroke-width="2"
+                            points="0 .649 3.613 4.127 0 7.604"
+                            transform="rotate(90 4 5)"
+                          ></polyline>
+                        </svg>
+                      </span>
+                      <ul class="tatsu-sub-menu clearfix">
+                        <li
+                          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1310"
+                        >
+                          <a title="Help Center" href="https://reconocematriculas.com/help/"
+                            >Centro de Ayuda</a
+                          >
+                        </li>
+                        <li
+                          class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22"
+                        >
+                          <a title="API Docs" href="http://docs.reconocematriculas.com/"
+                            >API Docs</a
+                          >
+                        </li>
+                        <li
+                          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-756"
+                        >
+                          <a
+                            title="Integrations"
+                            href="https://reconocematriculas.com/integrations/"
+                            >Integraciones</a
+                          >
+                        </li>
+                        <li
+                          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1317"
+                        >
+                          <a title="Docker" href="https://reconocematriculas.com/docker/"
+                            >Docker</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li
+                      class="menu-item menu-item-type-post_type menu-item-object-page menu-item-755"
+                    >
+                      <a title="Contact" href="https://reconocematriculas.com/contact/"
+                        >Contacto</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="tatsu-mobile-menu-icon">
+                  <div class="expand-click-area"></div>
+                  <div class="line-wrapper">
+                    <span class="line-1"></span><span class="line-2"></span
+                    ><span class="line-3"></span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="tatsu-module tatsu-normal-button tatsu-button-wrap align-block block- tatsu-evl-G7vdp"
+              >
+                <a
+                  class="tatsu-shortcode mediumbtn tatsu-button left-icon rounded bg-animation-none"
+                  href="https://app.reconocematriculas.com/accounts/signup/"
+                  data-animation="fadeIn"
+                  aria-label="Sign Up"
+                  data-gdpr-atts="{}"
+                  >Crear Cuenta</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="tatsu-header-placeholder"></div>
+    </div>
+    <div id="be-content">
+      <div
+        class="tatsu--_dhxuZ1PG tatsu-section tatsu-bg-overlay home-one tatsu-clearfix"
+        data-title=""
+        data-headerscheme="background--dark"
+      >
+        <div
+          class="tatsu-section-pad clearfix"
+          data-padding='{"d":"70px 0px 70px 0px"}'
+          data-padding-top="70px"
+        >
+          <div
+            class="tatsu-row-wrap tatsu-wrap tatsu-row-has-two-cols tatsu-medium-gutter tatsu-reg-cols tatsu-clearfix tatsu-GHNf5Xfbg-"
+          >
+            <div class="tatsu-row">
+              <div
+                class="tatsu-column tatsu-bg-overlay tatsu-two-third tatsu-column-image-none tatsu-column-effect-none tatsu-oL2w3QRtR"
+                data-parallax-speed="0"
+              >
+                <div class="tatsu-column-inner">
+                  <div class="tatsu-column-pad-wrap">
+                    <div class="tatsu-column-pad">
+                      <div
+                        class="tatsu-module tatsu-text-block-wrap tatsu-e1Sk78rnO"
+                      >
+                        <div
+                          class="tatsu-text-inner tatsu-align-center clearfix"
+                        >
+                          <!-- <h1>Accurate, Fast, Developer- Friendly ALPR</h1> -->
+                          <h1>ALPR Preciso, Rápido, Developer-Friendly</h1>
+                          <p class="big-p">
+                            Software Reconocedor de Matrículas Automático que
+                            funciona en todos los entornos. Optimizado para tu
+                            país.
+                          </p>
+                        </div>
+                      </div>
+                      <div
+                        class="tatsu-module tatsu-normal-button tatsu-button-wrap tatsu-CUwdN5cFb"
+                      >
+                        <a
+                          class="tatsu-shortcode mediumbtn tatsu-button left-icon rounded bg-animation-none"
+                          href="https://app.reconocematriculas.com/accounts/signup/"
+                          aria-label="Get Started"
+                          data-gdpr-atts="{}"
+                          >Empezar Ahora</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tatsu-column-bg-image-wrap">
+                    <div class="tatsu-column-bg-image"></div>
+                  </div>
+                  <div
+                    class="tatsu-overlay tatsu-column-overlay tatsu-animate-none"
+                  ></div>
+                </div>
+              </div>
+              <div
+                class="tatsu-column tatsu-bg-overlay tatsu-one-third tatsu-column-image-none tatsu-column-effect-none tatsu-0sOMzqf863"
+                data-parallax-speed="0"
+              >
+                <div class="tatsu-column-inner">
+                  <div class="tatsu-column-pad-wrap">
+                    <div class="tatsu-column-pad">
+                      <div
+                        class="tatsu-module tatsu-text-block-wrap tatsu-0kGPpUkcZ"
+                      >
+                        <div
+                          class="tatsu-text-inner tatsu-align-center clearfix"
+                        >
+                          <div class="try-box">
+                            <div class="try-box-head">Prueba Real</div>
+                            <div class="try-box-inner">
+                              <p>
+                                Suba una imagen (de hasta 3MB) y le devolvemos
+                                el contenído la matrícula.
+                              </p>
+                              <p>
+                                <!-- modificar -->
+                                <!-- modificar -->
+                                <!-- modificar -->
+                                <!-- modificar -->
+                                <!-- modificar -->
+                                <!-- modificar -->
+                                <!-- EN ESTOS DOS TENGO QUE PONER EL MIO, MÍ BOTÓN CON PÁGINA A DEMO -->
+                                <!-- <iframe
+                                  loading="lazy"
+                                  src="https://app.platerecognizer.com/alpr-demo"
+                                  width="150px"
+                                  height="38px"
+                                  frameborder="0"
+                                  data-rocket-lazyload="fitvidscompatible"
+                                  class="lazyloaded"
+                                  data-ll-status="loaded"
+                                ></iframe> -->
+                                <iframe
+                                  loading="lazy"
+                                  src="alpr-demo.html"
+                                  width="150px"
+                                  height="38px"
+                                  frameborder="0"
+                                  data-rocket-lazyload="fitvidscompatible"
+                                  class="lazyloaded"
+                                  data-ll-status="loaded"
+                                ></iframe>
+                                <!-- <noscript>
+                                  <iframe
+                                    src="https://app.platerecognizer.com/alpr-demo"
+                                    width="150px"
+                                    height="38px"
+                                    frameborder="0"
+                                  ></iframe
+                                ></noscript> -->
+                                <noscript>
+                                  <!-- falta borrar .html -->
+                                  <iframe
+                                    src="alpr-demo.html"
+                                    width="150px"
+                                    height="38px"
+                                    frameborder="0"
+                                  ></iframe
+                                ></noscript>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tatsu-column-bg-image-wrap">
+                    <div class="tatsu-column-bg-image"></div>
+                  </div>
+                  <div
+                    class="tatsu-overlay tatsu-column-overlay tatsu-animate-none"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tatsu-section-background-wrap">
+          <div class="tatsu-section-background"></div>
+        </div>
+        <div class="tatsu-overlay tatsu-section-overlay"></div>
+      </div>
+      <div
+        class="tatsu-4Hq4KWyhok tatsu-section tatsu-bg-overlay home-two tatsu-clearfix"
+        data-title=""
+        data-headerscheme="background--dark"
+      >
+        <div
+          class="tatsu-section-pad clearfix"
+          data-padding='{"d":"50px 0px 50px 0px"}'
+          data-padding-top="50px"
+        >
+          <div
+            class="tatsu-row-wrap tatsu-wrap tatsu-row-has-three-cols tatsu-medium-gutter tatsu-reg-cols tatsu-clearfix tatsu-Zi30OIia8P"
+          >
+            <div class="tatsu-row">
+              <div
+                class="tatsu-column tatsu-bg-overlay tatsu-one-third tatsu-column-image-none tatsu-column-effect-none tatsu-pGtxPPFbu"
+                data-parallax-speed="0"
+              >
+                <div class="tatsu-column-inner">
+                  <div class="tatsu-column-pad-wrap">
+                    <div class="tatsu-column-pad">
+                      <div
+                        class="tatsu-module tatsu-title-icon tatsu-RNfWHYOvP"
+                      >
+                        <span
+                          class="tatsu-ti-wrap tatsu-ti large plain align-left"
+                        >
+                          <i class="tatsu-ti tatsu-ti-icon"> </i>
+                          <img
+                            src="assets/images/anpr/features-img/bullseye-blue.svg"
+                            alt=""
+                          />
+                        </span>
+                        <div
+                          class="tatsu-tc tatsu-tc-custom-space align-left large plain"
+                        >
+                          <h6>A Prueba de Todo</h6>
+                        </div>
+                      </div>
+                      <div
+                        class="tatsu-module tatsu-text-block-wrap tatsu-8q6MHK2VW"
+                      >
+                        <div
+                          class="tatsu-text-inner tatsu-align-center clearfix"
+                        >
+                          <p>
+                            Nuestro algoritmo indentifica matrículas borrosas,
+                            oscuras, en ángulo, y
+                            <a href="https://reconocematriculas.com/alpr-results"
+                              >mucho más</a
+                            >! Vea nustro
+                            <span class="blue-span"
+                              ><a href="https://reconocematriculas.com/blog/anpr-for-india/"
+                                >ALPR en Brasil</a
+                              >&nbsp;o en
+                              <a href="https://reconocematriculas.com/blog/alpr-for-usa/"
+                                >Europa</a
+                              >.</span
+                            >
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tatsu-column-bg-image-wrap">
+                    <div class="tatsu-column-bg-image"></div>
+                  </div>
+                  <div
+                    class="tatsu-overlay tatsu-column-overlay tatsu-animate-none"
+                  ></div>
+                </div>
+              </div>
+              <div
+                class="tatsu-column tatsu-bg-overlay tatsu-one-third tatsu-column-image-none tatsu-column-effect-none tatsu-60lMRiWkrZ"
+                data-parallax-speed="0"
+              >
+                <div class="tatsu-column-inner">
+                  <div class="tatsu-column-pad-wrap">
+                    <div class="tatsu-column-pad">
+                      <div
+                        class="tatsu-module tatsu-title-icon tatsu-otO0488sK"
+                      >
+                        <span
+                          class="tatsu-ti-wrap tatsu-ti large plain align-left"
+                        >
+                          <i class="tatsu-ti tatsu-ti-icon"> </i>
+                          <img
+                            src="assets/images/anpr/features-img/video-blue.svg"
+                            alt=""
+                          />
+                        </span>
+                        <div
+                          class="tatsu-tc tatsu-tc-custom-space align-left large plain"
+                        >
+                          <h6>Imágenes &amp; Videos</h6>
+                        </div>
+                      </div>
+                      <div
+                        class="tatsu-module tatsu-text-block-wrap tatsu-_r1_H8GqM"
+                      >
+                        <div
+                          class="tatsu-text-inner tatsu-align-center clearfix"
+                        >
+                          <p>
+                            Manejamos ambos.
+                            <a href="https://reconocematriculas.com/snapshot/"
+                              ><span class="blue-span">Snapshot</span> </a
+                            >decodifica matrículas desde imágenes.
+                            <span class="blue-span"
+                              ><a href="https://reconocematriculas.com/stream/"
+                                >Stream (Beta)</a
+                              > </span
+                            >indentifíca y decodifica matrículas desde cámaras
+                            en vivo.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tatsu-column-bg-image-wrap">
+                    <div class="tatsu-column-bg-image"></div>
+                  </div>
+                  <div
+                    class="tatsu-overlay tatsu-column-overlay tatsu-animate-none"
+                  ></div>
+                </div>
+              </div>
+              <div
+                class="tatsu-column tatsu-bg-overlay tatsu-one-third tatsu-column-image-none tatsu-column-effect-none tatsu-Lxma_abEhc"
+                data-parallax-speed="0"
+              >
+                <div class="tatsu-column-inner">
+                  <div class="tatsu-column-pad-wrap">
+                    <div class="tatsu-column-pad">
+                      <div
+                        class="tatsu-module tatsu-title-icon tatsu-2mb0-e8C1"
+                      >
+                        <span
+                          class="tatsu-ti-wrap tatsu-ti large plain align-left"
+                        >
+                          <i class="tatsu-ti tatsu-ti-icon"> </i>
+                          <img
+                            src="assets/images/anpr/features-img/tasks-blue.svg"
+                            alt=""
+                          />
+                        </span>
+                        <div
+                          class="tatsu-tc tatsu-tc-custom-space align-left large plain"
+                        >
+                          <h6>Decodificaciones Múltiples</h6>
+                        </div>
+                      </div>
+                      <div
+                        class="tatsu-module tatsu-text-block-wrap tatsu-pwrNVJIfp"
+                      >
+                        <div
+                          class="tatsu-text-inner tatsu-align-center clearfix"
+                        >
+                          <p>
+                            Obtene la
+                            <a
+                              href="https://reconocematriculas.com/blog/vehicle-make-model-recognition-with-color/"
+                              >marca, modelo, color</a
+                            >, región, orientación,
+                            <a href="https://reconocematriculas.com/alpr-dashboard/"
+                              >Dashboard</a
+                            >, y más!
+                            <a href="https://reconocematriculas.com/blur/"
+                              ><span class="blue-span"
+                                >Matrículas Borrosas</span
+                              ></a
+                            >
+                            también! Y mucho más.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tatsu-column-bg-image-wrap">
+                    <div class="tatsu-column-bg-image"></div>
+                  </div>
+                  <div
+                    class="tatsu-overlay tatsu-column-overlay tatsu-animate-none"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tatsu-row-wrap tatsu-wrap tatsu-row-has-three-cols tatsu-medium-gutter tatsu-reg-cols tatsu-clearfix tatsu-w-_P0lO6u"
+          >
+            <div class="tatsu-row">
+              <div
+                class="tatsu-column tatsu-bg-overlay tatsu-one-third tatsu-column-image-none tatsu-column-effect-none tatsu-cTq1TWXUIm"
+                data-parallax-speed="0"
+              >
+                <div class="tatsu-column-inner">
+                  <div class="tatsu-column-pad-wrap">
+                    <div class="tatsu-column-pad">
+                      <div
+                        class="tatsu-module tatsu-title-icon tatsu-9WTpPqtCxu"
+                      >
+                        <span
+                          class="tatsu-ti-wrap tatsu-ti large plain align-left"
+                        >
+                          <i class="tatsu-ti tatsu-ti-icon"> </i>
+                          <img
+                            src="assets/images/anpr/features-img/server-blue.svg"
+                            alt=""
+                          />
+                        </span>
+                        <div
+                          class="tatsu-tc tatsu-tc-custom-space align-left large plain"
+                        >
+                          <h6>On-Premise &amp; Cloud</h6>
+                        </div>
+                      </div>
+                      <div
+                        class="tatsu-module tatsu-text-block-wrap tatsu-sJpLivyGK6"
+                      >
+                        <div
+                          class="tatsu-text-inner tatsu-align-center clearfix"
+                        >
+                          <p>
+                            Proveemos los 2, en la Nube y software instalado (no
+                            requiere Internet) en una gran variedad de hardware.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tatsu-column-bg-image-wrap">
+                    <div class="tatsu-column-bg-image"></div>
+                  </div>
+                  <div
+                    class="tatsu-overlay tatsu-column-overlay tatsu-animate-none"
+                  ></div>
+                </div>
+              </div>
+              <div
+                class="tatsu-column tatsu-bg-overlay tatsu-one-third tatsu-column-image-none tatsu-column-effect-none tatsu-D-0GXI55Ka"
+                data-parallax-speed="0"
+              >
+                <div class="tatsu-column-inner">
+                  <div class="tatsu-column-pad-wrap">
+                    <div class="tatsu-column-pad">
+                      <div
+                        class="tatsu-module tatsu-title-icon tatsu-PhaIlabGH2"
+                      >
+                        <span
+                          class="tatsu-ti-wrap tatsu-ti large plain align-left"
+                        >
+                          <i class="tatsu-ti tatsu-ti-icon"> </i>
+                          <img
+                            src="assets/images/anpr/features-img/paper-plane-blue.svg"
+                            alt=""
+                          />
+                        </span>
+                        <div
+                          class="tatsu-tc tatsu-tc-custom-space align-left large plain"
+                        >
+                          <h6>Rápido y Liviano</h6>
+                        </div>
+                      </div>
+                      <div
+                        class="tatsu-module tatsu-text-block-wrap tatsu-tJpfTAqI7v"
+                      >
+                        <div
+                          class="tatsu-text-inner tatsu-align-center clearfix"
+                        >
+                          <p>
+                            La Velocidad de
+                            <a href="https://reconocematriculas.com/snapshot/#speeds"
+                              ><span class="blue-span"> Snapshot </span></a
+                            >
+                            es de 50-100 ms y Stream procesa 5-10 cámaras en un
+                            CPU de gama media.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tatsu-column-bg-image-wrap">
+                    <div class="tatsu-column-bg-image"></div>
+                  </div>
+                  <div
+                    class="tatsu-overlay tatsu-column-overlay tatsu-animate-none"
+                  ></div>
+                </div>
+              </div>
+              <div
+                class="tatsu-column tatsu-bg-overlay tatsu-one-third tatsu-column-image-none tatsu-column-effect-none tatsu-yrbOmtgg9f"
+                data-parallax-speed="0"
+              >
+                <div class="tatsu-column-inner">
+                  <div class="tatsu-column-pad-wrap">
+                    <div class="tatsu-column-pad">
+                      <div
+                        class="tatsu-module tatsu-title-icon tatsu-KlwidPuJ0k"
+                      >
+                        <span
+                          class="tatsu-ti-wrap tatsu-ti large plain align-left"
+                        >
+                          <i class="tatsu-ti tatsu-ti-icon"> </i>
+                          <img
+                            src="assets/images/anpr/features-img/globe-americas-blue.svg"
+                            alt=""
+                          />
+                        </span>
+                        <div
+                          class="tatsu-tc tatsu-tc-custom-space align-left large plain"
+                        >
+                          <h6>Funcionando Globalmente</h6>
+                        </div>
+                      </div>
+                      <div
+                        class="tatsu-module tatsu-text-block-wrap tatsu-psHdYRxmS1"
+                      >
+                        <div
+                          class="tatsu-text-inner tatsu-align-center clearfix"
+                        >
+                          <p>
+                            Nuestro motor de ALPR soporta más de
+                            <a href="https://reconocematriculas.com/countries/"
+                              ><span class="blue-span">200 países</span></a
+                            >
+                            y es ajustado para tu región específica.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tatsu-column-bg-image-wrap">
+                    <div class="tatsu-column-bg-image"></div>
+                  </div>
+                  <div
+                    class="tatsu-overlay tatsu-column-overlay tatsu-animate-none"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tatsu-section-background-wrap">
+          <div class="tatsu-section-background"></div>
+        </div>
+        <div class="tatsu-overlay tatsu-section-overlay"></div>
+      </div>
+
+      <!-- inicio section -->
+      <div
+        class="tatsu-mvT1aAg5Q tatsu-section tatsu-bg-overlay home-nine tatsu-clearfix"
+        data-title="Test_Drive_ALPR_Free"
+        data-headerscheme="background--dark"
+      >
+        <div
+          class="tatsu-section-pad clearfix"
+          data-padding='{"d":"50px 0px 50px 0px"}'
+          data-padding-top="50px"
+        >
+          <div
+            class="tatsu-row-wrap tatsu-wrap tatsu-row-one-col tatsu-row-has-one-cols tatsu-medium-gutter tatsu-reg-cols tatsu-clearfix tatsu-ArHF909xtP"
+          >
+            <div class="tatsu-row">
+              <div
+                class="tatsu-column tatsu-bg-overlay tatsu-one-col tatsu-column-image-none tatsu-column-effect-none tatsu-8bYTdPl4iD"
+                data-parallax-speed="0"
+              >
+                <div class="tatsu-column-inner">
+                  <div class="tatsu-column-pad-wrap">
+                    <div class="tatsu-column-pad">
+                      <div
+                        class="tatsu-module tatsu-text-block-wrap tatsu-N63WpQXxYg"
+                      >
+                        <div
+                          class="tatsu-text-inner tatsu-align-center clearfix"
+                        >
+                          <h2 class="white-h2">Prueba</h2>
+                          <p class="white-p">
+                            Contactanos y obtené una prueba gratuita de Snapshot
+                            o Stream!
+                            <!-- <br />
+                            Podes ver nuestros
+                            <span style="text-decoration: underline"
+                              ><a href="https://reconocematriculas.com/pricing/"
+                                >Precios</a
+                              ></span
+                            >
+                            según tus necesidades. -->
+                          </p>
+                        </div>
+                      </div>
+                      <div
+                        class="tatsu-module tatsu-normal-button tatsu-button-wrap align-block block-center tatsu-qnJWJ7M1oF"
+                      >
+                        <a
+                          class="tatsu-shortcode mediumbtn tatsu-button left-icon rounded bg-animation-none"
+                          href="https://app.reconocematriculas.com/accounts/signup/"
+                          aria-label="Get Started"
+                          data-gdpr-atts="{}"
+                          >Empezar Ahora</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tatsu-column-bg-image-wrap">
+                    <div class="tatsu-column-bg-image"></div>
+                  </div>
+                  <div
+                    class="tatsu-overlay tatsu-column-overlay tatsu-animate-none"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="tatsu-section-background-wrap">
+          <div class="tatsu-section-background"></div>
+        </div>
+        <div class="tatsu-overlay tatsu-section-overlay"></div>
+      </div>     
+      <!-- inicio section -->
+ 
+      <div
+        class="tatsu-1TwhvaMDBT tatsu-section tatsu-bg-overlay home-three tatsu-clearfix"
+        data-title=""
+        data-headerscheme="background--dark"
+      >
+        <div
+          class="tatsu-section-pad clearfix"
+          data-padding='{"d":"50px 0px 10px 0px"}'
+          data-padding-top="50px"
+        >
+          <div
+            class="tatsu-row-wrap tatsu-wrap tatsu-row-one-col tatsu-row-has-one-cols tatsu-medium-gutter tatsu-reg-cols tatsu-clearfix tatsu-GwvZ4vKMzm"
+          >
+            <div class="tatsu-row">
+              <div
+                class="tatsu-column tatsu-bg-overlay tatsu-one-col tatsu-column-image-none tatsu-column-effect-none tatsu-qLdh39t7I"
+                data-parallax-speed="0"
+              >
+                <div class="tatsu-column-inner">
+                  <div class="tatsu-column-pad-wrap">
+                    <div class="tatsu-column-pad">
+                      <div
+                        class="tatsu-module tatsu-text-block-wrap tatsu-qhNWT23CQ"
+                      >
+                        <div
+                          class="tatsu-text-inner tatsu-align-center clearfix"
+                        >
+                          <h2>ALPR que funciona</h2>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tatsu-column-bg-image-wrap">
+                    <div class="tatsu-column-bg-image"></div>
+                  </div>
+                  <div
+                    class="tatsu-overlay tatsu-column-overlay tatsu-animate-none"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tatsu-row-wrap tatsu-wrap tatsu-row-has-four-cols tatsu-tiny-gutter tatsu-reg-cols tatsu-clearfix tatsu-yhRMw412rH"
+          >
+            <div class="tatsu-row">
+              <div
+                class="tatsu-column tatsu-bg-overlay tatsu-one-fourth tatsu-column-image-none tatsu-column-effect-none tatsu-X0EOenBmo"
+                data-parallax-speed="0"
+              >
+                <div class="tatsu-column-inner">
+                  <div class="tatsu-column-pad-wrap">
+                    <div class="tatsu-column-pad">
+                      <div
+                        class="tatsu-module tatsu-text-block-wrap tatsu-GCUG5rPow"
+                      >
+                        <div
+                          class="tatsu-text-inner tatsu-align-center clearfix"
+                        >
+                          <div class="work-box">
+                            <img
+                              src="assets/images/anpr/section-1-examples/ALPR-baja-resolucion.webp"
+                              alt=""
+                              class="lazyloaded"
+                              data-ll-status="loaded"
+                            /><noscript
+                              ><img
+                                src="assets/images/anpr/section-1-examples/ALPR-baja-resolucion.webp"
+                                alt=""
+                            /></noscript>
+                            <p></p>
+                            <div class="work-box-desc">
+                              Funciona en Imágenes Borrosas
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tatsu-column-bg-image-wrap">
+                    <div class="tatsu-column-bg-image"></div>
+                  </div>
+                  <div
+                    class="tatsu-overlay tatsu-column-overlay tatsu-animate-none"
+                  ></div>
+                </div>
+              </div>
+              <div
+                class="tatsu-column tatsu-bg-overlay tatsu-one-fourth tatsu-column-image-none tatsu-column-effect-none tatsu-A3ZUZKtAOA"
+                data-parallax-speed="0"
+              >
+                <div class="tatsu-column-inner">
+                  <div class="tatsu-column-pad-wrap">
+                    <div class="tatsu-column-pad">
+                      <div
+                        class="tatsu-module tatsu-text-block-wrap tatsu-It_DmUxDH"
+                      >
+                        <div
+                          class="tatsu-text-inner tatsu-align-center clearfix"
+                        >
+                          <div class="work-box">
+                            <img
+                              src="assets/images/anpr/section-1-examples/ALPR-ANPR-angulo.webp"
+                              alt=""
+                              class="lazyloaded"
+                              data-ll-status="loaded"
+                            /><noscript
+                              ><img
+                                src="assets/images/anpr/section-1-examples/ALPR-ANPR-angulo.webp"
+                                alt=""
+                            /></noscript>
+                            <p></p>
+                            <div class="work-box-desc">
+                              Funciona en Matrículas en Ángulo
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tatsu-column-bg-image-wrap">
+                    <div class="tatsu-column-bg-image"></div>
+                  </div>
+                  <div
+                    class="tatsu-overlay tatsu-column-overlay tatsu-animate-none"
+                  ></div>
+                </div>
+              </div>
+              <div
+                class="tatsu-column tatsu-bg-overlay tatsu-one-fourth tatsu-column-image-none tatsu-column-effect-none tatsu-fcR1BYdyRQ"
+                data-parallax-speed="0"
+              >
+                <div class="tatsu-column-inner">
+                  <div class="tatsu-column-pad-wrap">
+                    <div class="tatsu-column-pad">
+                      <div
+                        class="tatsu-module tatsu-text-block-wrap tatsu-v_L53ftHs"
+                      >
+                        <div
+                          class="tatsu-text-inner tatsu-align-center clearfix"
+                        >
+                          <div class="work-box">
+                            <img
+                              src="assets/images/anpr/section-1-examples/ALPR-ANPR-oscuro.webp"
+                              alt=""
+                              class="lazyloaded"
+                              data-ll-status="loaded"
+                            /><noscript
+                              ><img
+                                src="assets/images/anpr/section-1-examples/ALPR-ANPR-oscuro.webp"
+                                alt=""
+                            /></noscript>
+                            <p></p>
+                            <div class="work-box-desc">
+                              Funciona en Entornos Oscuros
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tatsu-column-bg-image-wrap">
+                    <div class="tatsu-column-bg-image"></div>
+                  </div>
+                  <div
+                    class="tatsu-overlay tatsu-column-overlay tatsu-animate-none"
+                  ></div>
+                </div>
+              </div>
+              <div
+                class="tatsu-column tatsu-bg-overlay tatsu-one-fourth tatsu-column-image-none tatsu-column-effect-none tatsu-0ykEQT2Iz_"
+                data-parallax-speed="0"
+              >
+                <div class="tatsu-column-inner">
+                  <div class="tatsu-column-pad-wrap">
+                    <div class="tatsu-column-pad">
+                      <div
+                        class="tatsu-module tatsu-text-block-wrap tatsu-eU9nL1Enm"
+                      >
+                        <div
+                          class="tatsu-text-inner tatsu-align-center clearfix"
+                        >
+                          <div class="work-box">
+                            <img
+                              src="assets/images/anpr/section-1-examples/ALPR-ANPR-rapido.webp"
+                              alt=""
+                              class="lazyloaded"
+                              data-ll-status="loaded"
+                            /><noscript
+                              ><img
+                                src="assets/images/anpr/section-1-examples/ALPR-ANPR-rapido.webp"
+                                alt=""
+                            /></noscript>
+                            <p></p>
+                            <div class="work-box-desc">
+                              Funciona en Movimiento
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tatsu-column-bg-image-wrap">
+                    <div class="tatsu-column-bg-image"></div>
+                  </div>
+                  <div
+                    class="tatsu-overlay tatsu-column-overlay tatsu-animate-none"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tatsu-row-wrap tatsu-wrap tatsu-row-has-four-cols tatsu-tiny-gutter tatsu-reg-cols tatsu-clearfix tatsu-RvkZXGjCJ"
+          >
+            <div class="tatsu-row">
+              <div
+                class="tatsu-column tatsu-bg-overlay tatsu-one-fourth tatsu-column-image-none tatsu-column-effect-none tatsu-olCp3jy8ER"
+                data-parallax-speed="0"
+              >
+                <div class="tatsu-column-inner">
+                  <div class="tatsu-column-pad-wrap">
+                    <div class="tatsu-column-pad">
+                      <div
+                        class="tatsu-module tatsu-text-block-wrap tatsu-MXIU2mu2AT"
+                      >
+                        <div
+                          class="tatsu-text-inner tatsu-align-center clearfix"
+                        >
+                          <div class="work-box">
+                            <img
+                              src="assets/images/anpr/section-1-examples/ALPR-ANPR-borroso.webp"
+                              alt=""
+                              class="lazyloaded"
+                              data-ll-status="loaded"
+                            /><noscript
+                              ><img
+                                src="assets/images/anpr/section-1-examples/ALPR-ANPR-borroso.webp"
+                                alt=""
+                            /></noscript>
+                            <p></p>
+                            <div class="work-box-desc">
+                              Funciona con Baja Resolución
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tatsu-column-bg-image-wrap">
+                    <div class="tatsu-column-bg-image"></div>
+                  </div>
+                  <div
+                    class="tatsu-overlay tatsu-column-overlay tatsu-animate-none"
+                  ></div>
+                </div>
+              </div>
+              <div
+                class="tatsu-column tatsu-bg-overlay tatsu-one-fourth tatsu-column-image-none tatsu-column-effect-none tatsu-8GIVcRSUHK"
+                data-parallax-speed="0"
+              >
+                <div class="tatsu-column-inner">
+                  <div class="tatsu-column-pad-wrap">
+                    <div class="tatsu-column-pad">
+                      <div
+                        class="tatsu-module tatsu-text-block-wrap tatsu-V14Cr0L1bn"
+                      >
+                        <div
+                          class="tatsu-text-inner tatsu-align-center clearfix"
+                        >
+                          <div class="work-box">
+                            <img
+                              src="assets/images/anpr/section-1-examples/ALPR-ANPR-iconos.webp"
+                              alt=""
+                              class="lazyloaded"
+                              data-ll-status="loaded"
+                            /><noscript
+                              ><img
+                                src="assets/images/anpr/section-1-examples/ALPR-ANPR-iconos.webp"
+                                alt=""
+                            /></noscript>
+                            <p></p>
+                            <div class="work-box-desc">
+                              Funciona en Matrículas con Íconos
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tatsu-column-bg-image-wrap">
+                    <div class="tatsu-column-bg-image"></div>
+                  </div>
+                  <div
+                    class="tatsu-overlay tatsu-column-overlay tatsu-animate-none"
+                  ></div>
+                </div>
+              </div>
+              <div
+                class="tatsu-column tatsu-bg-overlay tatsu-one-fourth tatsu-column-image-none tatsu-column-effect-none tatsu-9xEPkb2zEp"
+                data-parallax-speed="0"
+              >
+                <div class="tatsu-column-inner">
+                  <div class="tatsu-column-pad-wrap">
+                    <div class="tatsu-column-pad">
+                      <div
+                        class="tatsu-module tatsu-text-block-wrap tatsu-4MnRaCaZoC"
+                      >
+                        <div
+                          class="tatsu-text-inner tatsu-align-center clearfix"
+                        >
+                          <div class="work-box">
+                            <img
+                              src="assets/images/anpr/section-1-examples/ANPR-ALPR-multiple.webp"
+                              alt=""
+                              class="lazyloaded"
+                              data-ll-status="loaded"
+                            /><noscript
+                              ><img
+                                src="assets/images/anpr/section-1-examples/ANPR-ALPR-multiple.webp"
+                                alt=""
+                            /></noscript>
+                            <p></p>
+                            <div class="work-box-desc">
+                              Funciona con Varios Vehículos
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tatsu-column-bg-image-wrap">
+                    <div class="tatsu-column-bg-image"></div>
+                  </div>
+                  <div
+                    class="tatsu-overlay tatsu-column-overlay tatsu-animate-none"
+                  ></div>
+                </div>
+              </div>
+              <div
+                class="tatsu-column tatsu-bg-overlay tatsu-one-fourth tatsu-column-image-none tatsu-column-effect-none tatsu-jJbKIYTWVz"
+                data-parallax-speed="0"
+              >
+                <div class="tatsu-column-inner">
+                  <div class="tatsu-column-pad-wrap">
+                    <div class="tatsu-column-pad">
+                      <div
+                        class="tatsu-module tatsu-text-block-wrap tatsu-x5EsyWesjt"
+                      >
+                        <div
+                          class="tatsu-text-inner tatsu-align-center clearfix"
+                        >
+                          <div class="work-box">
+                            <img
+                              src="assets/images/anpr/section-1-examples/ALPR-ANPR-lineas.webp"
+                              alt=""
+                              class="lazyloaded"
+                              data-ll-status="loaded"
+                            /><noscript
+                              ><img
+                                src="assets/images/anpr/section-1-examples/ALPR-ANPR-lineas.webp"
+                                alt=""
+                            /></noscript>
+                            <p></p>
+                            <div class="work-box-desc">
+                              Funciona con +1 Línea
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tatsu-column-bg-image-wrap">
+                    <div class="tatsu-column-bg-image"></div>
+                  </div>
+                  <div
+                    class="tatsu-overlay tatsu-column-overlay tatsu-animate-none"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tatsu-section-background-wrap">
+          <div class="tatsu-section-background"></div>
+        </div>
+        <div class="tatsu-overlay tatsu-section-overlay"></div>
+      </div>
+      <div
+        class="tatsu-pj2liqpGo5 tatsu-section tatsu-bg-overlay tatsu-clearfix"
+        data-title=""
+        data-headerscheme="background--dark"
+      >
+        <div
+          class="tatsu-section-pad clearfix"
+          data-padding='{"d":"10px 0px 50px 0px"}'
+          data-padding-top="10px"
+        >
+          <div
+            class="tatsu-row-wrap tatsu-wrap tatsu-row-one-col tatsu-row-has-one-cols tatsu-medium-gutter tatsu-reg-cols tatsu-clearfix tatsu-q77D5QKWyl"
+          >
+            <div class="tatsu-row">
+              <div
+                class="tatsu-column tatsu-bg-overlay tatsu-one-col tatsu-column-image-none tatsu-column-effect-none tatsu-rHBhp6P3i"
+                data-parallax-speed="0"
+              >
+                <div class="tatsu-column-inner">
+                  <div class="tatsu-column-pad-wrap">
+                    <div class="tatsu-column-pad">
+                      <div
+                        class="tatsu-module tatsu-text-block-wrap tatsu-H9T6tr6Mv"
+                      >
+                        <div
+                          class="tatsu-text-inner tatsu-align-center clearfix"
+                        >
+                          <p style="text-align: center">
+                            Podes ver más resultados en
+                            <a href="https://reconocematriculas.com/alpr-results"
+                              >ALPR - resultados</a
+                            >.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tatsu-column-bg-image-wrap">
+                    <div class="tatsu-column-bg-image"></div>
+                  </div>
+                  <div
+                    class="tatsu-overlay tatsu-column-overlay tatsu-animate-none"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tatsu-section-background-wrap">
+          <div class="tatsu-section-background"></div>
+        </div>
+        <div class="tatsu-overlay tatsu-section-overlay"></div>
+      </div>
+      <div
+        class="tatsu-wruhIhLzjx tatsu-section tatsu-bg-overlay home-four tatsu-clearfix"
+        data-title=""
+        data-headerscheme="background--dark"
+      >
+        <div
+          class="tatsu-section-pad clearfix"
+          data-padding='{"d":"50px 0px 50px 0px"}'
+          data-padding-top="50px"
+        >
+          <div
+            class="tatsu-row-wrap tatsu-wrap tatsu-row-one-col tatsu-row-has-one-cols tatsu-medium-gutter tatsu-reg-cols tatsu-clearfix tatsu-0W3eOficfw"
+          >
+            <div class="tatsu-row">
+              <div
+                class="tatsu-column tatsu-bg-overlay tatsu-one-col tatsu-column-image-none tatsu-column-effect-none tatsu-xusWndXPD"
+                data-parallax-speed="0"
+              >
+                <div class="tatsu-column-inner">
+                  <div class="tatsu-column-pad-wrap">
+                    <div class="tatsu-column-pad">
+                      <div
+                        class="tatsu-module tatsu-text-block-wrap tatsu-4bY09NgCz"
+                      >
+                        <div
+                          class="tatsu-text-inner tatsu-align-center clearfix"
+                        >
+                          <h2 class="white-h2">
+                            Decodificaciones Múltiples
+                          </h2>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tatsu-column-bg-image-wrap">
+                    <div class="tatsu-column-bg-image"></div>
+                  </div>
+                  <div
+                    class="tatsu-overlay tatsu-column-overlay tatsu-animate-none"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tatsu-row-wrap tatsu-wrap tatsu-row-has-three-cols tatsu-medium-gutter tatsu-reg-cols tatsu-clearfix tatsu-L1KvI9aX2f"
+          >
+            <div class="tatsu-row">
+              <div
+                class="tatsu-column tatsu-bg-overlay tatsu-one-third tatsu-column-image-none tatsu-column-effect-none tatsu--EXiYh__j"
+                data-parallax-speed="0"
+              >
+                <div class="tatsu-column-inner">
+                  <div class="tatsu-column-pad-wrap">
+                    <div class="tatsu-column-pad">
+                      <div
+                        class="tatsu-single-image tatsu-module tatsu-1byNQ5KOK"
+                      >
+                        <div
+                          class="tatsu-single-image-inner"
+                          style="width: 520px"
+                        >
+                          <div
+                            class="tatsu-single-image-padding-wrap"
+                            style="padding-bottom: 57.692307692308%"
+                          ></div>
+                          <a
+                            class="mfp-image"
+                            href="assets/images/anpr/section-2-ticks/bmw-outputs.jpg"
+                            ><img
+                              class="tatsu-gradient-border lazyloaded"
+                              alt="ALPR ANPR License Plate Recognition Software"
+                              src="assets/images/anpr/section-2-ticks/bmw-outputs.jpg"
+                              data-ll-status="loaded" /><noscript
+                              ><img
+                                class="tatsu-gradient-border"
+                                alt="ALPR ANPR License Plate Recognition Software"
+                                src="assets/images/anpr/section-2-ticks/bmw-outputs.jpg" /></noscript
+                          ></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tatsu-column-bg-image-wrap">
+                    <div class="tatsu-column-bg-image"></div>
+                  </div>
+                  <div
+                    class="tatsu-overlay tatsu-column-overlay tatsu-animate-none"
+                  ></div>
+                </div>
+              </div>
+              <div
+                class="tatsu-column tatsu-bg-overlay tatsu-one-third tatsu-column-image-none tatsu-column-effect-none tatsu-gjjEOFhg3_"
+                data-parallax-speed="0"
+              >
+                <div class="tatsu-column-inner">
+                  <div class="tatsu-column-pad-wrap">
+                    <div class="tatsu-column-pad">
+                      <div
+                        class="tatsu-module tatsu-text-block-wrap tatsu-gt8AB1-3R"
+                      >
+                        <div
+                          class="tatsu-text-inner tatsu-align-center clearfix"
+                        >
+                          <ul class="my-ul-li">
+                            <li>
+                              <span class="dark-span">Matrícula: </span>AU2632
+                            </li>
+                            <li><span class="dark-span">Veces Visto Hoy: </span>2</li>
+                            <li>
+                              <span class="dark-span">Región: </span>CH-SH
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tatsu-column-bg-image-wrap">
+                    <div class="tatsu-column-bg-image"></div>
+                  </div>
+                  <div
+                    class="tatsu-overlay tatsu-column-overlay tatsu-animate-none"
+                  ></div>
+                </div>
+              </div>
+              <div
+                class="tatsu-column tatsu-bg-overlay tatsu-one-third tatsu-column-image-none tatsu-column-effect-none tatsu-K1-pUNPjcF"
+                data-parallax-speed="0"
+              >
+                <div class="tatsu-column-inner">
+                  <div class="tatsu-column-pad-wrap">
+                    <div class="tatsu-column-pad">
+                      <div
+                        class="tatsu-module tatsu-text-block-wrap tatsu-gR5VNlKgU"
+                      >
+                        <div
+                          class="tatsu-text-inner tatsu-align-center clearfix"
+                        >
+                          <ul class="my-ul-li">
+                            <li><span class="dark-span">Obstrucción: </span>No</li>
+                            <li>
+                              <span class="dark-span">Vehículo: </span>Auto
+                            </li>
+                            <li><span class="dark-span">Precisión: </span>99 %</li>
+                            <!-- <li>
+                              <span class="dark-span">Orientación: </span
+                              >Trasera
+                            </li> -->
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tatsu-column-bg-image-wrap">
+                    <div class="tatsu-column-bg-image"></div>
+                  </div>
+                  <div
+                    class="tatsu-overlay tatsu-column-overlay tatsu-animate-none"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tatsu-section-background-wrap">
+          <div class="tatsu-section-background"></div>
+        </div>
+        <div class="tatsu-overlay tatsu-section-overlay"></div>
+      </div>
+      <div
+        class="tatsu-dwTZp6R-- tatsu-section tatsu-bg-overlay tatsu-clearfix"
+        data-title="Snapshot"
+        data-headerscheme="background--dark"
+      >
+        <div
+          class="tatsu-section-pad clearfix"
+          data-padding='{"d":"50px 0px 50px 0px"}'
+          data-padding-top="50px"
+        >
+          <div
+            class="tatsu-row-wrap tatsu-wrap tatsu-row-one-col tatsu-row-has-one-cols tatsu-medium-gutter tatsu-reg-cols tatsu-clearfix tatsu-eeai5IcNUZ"
+          >
+            <div class="tatsu-row">
+              <div
+                class="tatsu-column tatsu-bg-overlay tatsu-one-col tatsu-column-image-none tatsu-column-effect-none tatsu-vIzVgSr3Sc"
+                data-parallax-speed="0"
+              >
+                <div class="tatsu-column-inner">
+                  <div class="tatsu-column-pad-wrap">
+                    <div class="tatsu-column-pad">
+                      <div
+                        class="tatsu-module tatsu-text-block-wrap tatsu-dOh1PoeyMw"
+                      >
+                        <div
+                          class="tatsu-text-inner tatsu-align-center clearfix"
+                        >
+                          <h2>Snapshot ALPR</h2>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tatsu-column-bg-image-wrap">
+                    <div class="tatsu-column-bg-image"></div>
+                  </div>
+                  <div
+                    class="tatsu-overlay tatsu-column-overlay tatsu-animate-none"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tatsu-row-wrap tatsu-wrap tatsu-row-has-one-half tatsu-row-has-two-cols tatsu-medium-gutter tatsu-reg-cols tatsu-clearfix tatsu-BZy1R0s18L"
+          >
+            <div class="tatsu-row">
+              <div
+                class="tatsu-column tatsu-bg-overlay tatsu-one-half tatsu-column-image-none tatsu-column-effect-none tatsu-z2eR5w3Tt"
+                data-parallax-speed="0"
+              >
+                <div class="tatsu-column-inner">
+                  <div class="tatsu-column-pad-wrap">
+                    <div class="tatsu-column-pad">
+                      <div
+                        class="tatsu-single-image tatsu-module align-center tatsu-t6HhGhPO-"
+                      >
+                        <div
+                          class="tatsu-single-image-inner"
+                          style="width: 735px"
+                        >
+                          <div
+                            class="tatsu-single-image-padding-wrap"
+                            style="padding-bottom: 56.734693877551%"
+                          ></div>
+                          <a
+                            class="mfp-image"
+                            href="assets/images/anpr/section-2-ticks/porsche-outputs.jpg"
+                            ><img
+                              class="tatsu-gradient-border lazyloaded"
+                              alt="ALPR license plate reader images API"
+                              src="assets/images/anpr/section-2-ticks/porsche-outputs.jpg"
+                              data-ll-status="loaded" /><noscript
+                              ><img
+                                class="tatsu-gradient-border"
+                                alt="ALPR license plate reader images API"
+                                src="assets/images/anpr/section-2-ticks/porsche-outputs.jpg" /></noscript
+                          ></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tatsu-column-bg-image-wrap">
+                    <div class="tatsu-column-bg-image"></div>
+                  </div>
+                  <div
+                    class="tatsu-overlay tatsu-column-overlay tatsu-animate-none"
+                  ></div>
+                </div>
+              </div>
+              <div
+                class="tatsu-column tatsu-bg-overlay tatsu-one-half tatsu-column-image-none tatsu-column-effect-none tatsu-YImNToUvKO"
+                data-parallax-speed="0"
+              >
+                <div class="tatsu-column-inner">
+                  <div class="tatsu-column-pad-wrap">
+                    <div class="tatsu-column-pad">
+                      <div
+                        class="tatsu-module tatsu-text-block-wrap tatsu-R5stnIRJM"
+                      >
+                        <div
+                          class="tatsu-text-inner tatsu-align-center clearfix"
+                        >
+                          <ul class="my-ul-li">
+                            <li>
+                              <span class="dark-span">INPUT: </span>Recibe
+                              imagen en cualquier formato.
+                            </li>
+                            <li>
+                              <span class="dark-span">OUTPUT: </span>Decodifica
+                              matrícula, vehículo, modelo, color y más!
+                            </li>
+                            <li>
+                              <span class="dark-span">HARDWARE: </span>Funciona
+                              en Cloud desde nuestros Servidores o con SDK
+                              Instalado (sin Internet requerido) en Windows,
+                              Linux y más.
+                            </li>
+                            <li>
+                              <span class="dark-span">VELOCIDAD: </span>Rápida
+                              velocidad de Inferencia para SDK (50 ms) y Cloud
+                              (200 ms).
+                            </li>
+                            <li>
+                              <span class="dark-span">MÁS: </span
+                              ><a href="https://docs.reconocematriculas.com/">Código</a>
+                              en 8 lenguajes,
+                              <a href="https://reconocematriculas.com/blog/alpr-webhooks/"
+                                >Webhooks</a
+                              >,
+                              <a href="https://reconocematriculas.com/alpr-dashboard/"
+                                >Panel de Control</a
+                              >
+                              y más!
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div
+                        class="tatsu-module tatsu-normal-button tatsu-button-wrap align-block block-right tatsu-HQGLn6DPe"
+                      >
+                        <a
+                          class="tatsu-shortcode mediumbtn tatsu-button left-icon rounded bg-animation-none"
+                          href="https://reconocematriculas.com/snapshot"
+                          aria-label="Learn More"
+                          data-gdpr-atts="{}"
+                          >Saber Más</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tatsu-column-bg-image-wrap">
+                    <div class="tatsu-column-bg-image"></div>
+                  </div>
+                  <div
+                    class="tatsu-overlay tatsu-column-overlay tatsu-animate-none"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tatsu-section-background-wrap">
+          <div class="tatsu-section-background"></div>
+        </div>
+        <div class="tatsu-overlay tatsu-section-overlay"></div>
+      </div>
+      <div
+        class="tatsu-r7TLaDdQP tatsu-section tatsu-bg-overlay tatsu-clearfix"
+        data-title="Stream"
+        data-headerscheme="background--dark"
+      >
+        <div
+          class="tatsu-section-pad clearfix"
+          data-padding='{"d":"50px 0px 50px 0px"}'
+          data-padding-top="50px"
+        >
+          <div
+            class="tatsu-row-wrap tatsu-wrap tatsu-row-one-col tatsu-row-has-one-cols tatsu-medium-gutter tatsu-reg-cols tatsu-clearfix tatsu-Ba4Q7yeOD_"
+          >
+            <div class="tatsu-row">
+              <div
+                class="tatsu-column tatsu-bg-overlay tatsu-one-col tatsu-column-image-none tatsu-column-effect-none tatsu-xP3eDiUBfl"
+                data-parallax-speed="0"
+              >
+                <div class="tatsu-column-inner">
+                  <div class="tatsu-column-pad-wrap">
+                    <div class="tatsu-column-pad">
+                      <div
+                        class="tatsu-module tatsu-text-block-wrap tatsu-qbaJNA4Vhp"
+                      >
+                        <div
+                          class="tatsu-text-inner tatsu-align-center clearfix"
+                        >
+                          <h2>Stream ALPR</h2>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tatsu-column-bg-image-wrap">
+                    <div class="tatsu-column-bg-image"></div>
+                  </div>
+                  <div
+                    class="tatsu-overlay tatsu-column-overlay tatsu-animate-none"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tatsu-row-wrap tatsu-wrap tatsu-row-has-one-half tatsu-row-has-two-cols tatsu-medium-gutter tatsu-reg-cols tatsu-clearfix tatsu-K8_bUIutGr"
+          >
+            <div class="tatsu-row">
+              <div
+                class="tatsu-column tatsu-bg-overlay tatsu-one-half tatsu-column-image-none tatsu-column-effect-none tatsu-FxsA0UO8gl"
+                data-parallax-speed="0"
+              >
+                <div class="tatsu-column-inner">
+                  <div class="tatsu-column-pad-wrap">
+                    <div class="tatsu-column-pad">
+                      <div
+                        class="tatsu-module tatsu-text-block-wrap tatsu-MyFT8o0xGn"
+                      >
+                        <div
+                          class="tatsu-text-inner tatsu-align-center clearfix"
+                        >
+                          <ul class="my-ul-li">
+                            <li>
+                              <span class="dark-span">INPUT: </span>Toma imagen
+                              en Vivo de Cámara o Video.
+                            </li>
+                            <li>
+                              <span class="dark-span">OUTPUT: </span>Detecta
+                              vehículos y decodifica, marca, modelo, color y
+                              más.
+                            </li>
+                            <li>
+                              <span class="dark-span">HARDWARE: </span>Funciona
+                              en SDK On-Premise con Linux, Windows, Jetson
+                              (+GPU) y Mac.
+                            </li>
+                            <li>
+                              <span class="dark-span">VELOCIDAD: </span>Procesa
+                              hasta 4 cámaras simultaneamente en una PC de gama
+                              media.
+                            </li>
+                            <li>
+                              <span class="dark-span">MÁS: </span>Incluye
+                              Webhooks,
+                              <a href="https://reconocematriculas.com/alpr-dashboard/"
+                                >Panel de Control</a
+                              >
+                              con alertas personalizadas, etc.
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div
+                        class="tatsu-module tatsu-normal-button tatsu-button-wrap align-block block-left tatsu-EAUPlG2SFU"
+                      >
+                        <a
+                          class="tatsu-shortcode mediumbtn tatsu-button left-icon rounded bg-animation-none"
+                          href="https://reconocematriculas.com/stream"
+                          aria-label="Learn More"
+                          data-gdpr-atts="{}"
+                          >Saber Más</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tatsu-column-bg-image-wrap">
+                    <div class="tatsu-column-bg-image"></div>
+                  </div>
+                  <div
+                    class="tatsu-overlay tatsu-column-overlay tatsu-animate-none"
+                  ></div>
+                </div>
+              </div>
+              <div
+                class="tatsu-column tatsu-bg-overlay tatsu-one-half tatsu-column-image-none tatsu-column-effect-none tatsu-dqxkGm5QdY"
+                data-parallax-speed="0"
+              >
+                <div class="tatsu-column-inner">
+                  <div class="tatsu-column-pad-wrap">
+                    <div class="tatsu-column-pad">
+                      <div
+                        class="tatsu-single-image tatsu-module align-center tatsu-UVPxiI8K7"
+                      >
+                        <div
+                          class="tatsu-single-image-inner"
+                          style="width: 735px"
+                        >
+                          <div
+                            class="tatsu-single-image-padding-wrap"
+                            style="padding-bottom: 56.734693877551%"
+                          ></div>
+                          <a
+                            class="mfp-image"
+                            href="assets/images/anpr/section-2-ticks/bmw-camera.jpg"
+                            ><img
+                              class="tatsu-gradient-border lazyloaded"
+                              alt="ANPR number plate recognition camera video stream"
+                              src="assets/images/anpr/section-2-ticks/bmw-camera.jpg"
+                              data-ll-status="loaded" /><noscript
+                              ><img
+                                class="tatsu-gradient-border"
+                                alt="ANPR number plate recognition camera video stream"
+                                src="assets/images/anpr/section-2-ticks/bmw-camera.jpg" /></noscript
+                          ></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tatsu-column-bg-image-wrap">
+                    <div class="tatsu-column-bg-image"></div>
+                  </div>
+                  <div
+                    class="tatsu-overlay tatsu-column-overlay tatsu-animate-none"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tatsu-section-background-wrap">
+          <div class="tatsu-section-background"></div>
+        </div>
+        <div class="tatsu-overlay tatsu-section-overlay"></div>
+      </div>
+      <div
+        class="tatsu-ODHAkO3Vy tatsu-section tatsu-bg-overlay tatsu-clearfix"
+        data-title=""
+        data-headerscheme="background--dark"
+      >
+        <div
+          class="tatsu-section-pad clearfix"
+          data-padding='{"d":"50px 0px 50px 0px"}'
+          data-padding-top="50px"
+        >
+          <div
+            class="tatsu-row-wrap tatsu-wrap tatsu-row-one-col tatsu-row-has-one-cols tatsu-medium-gutter tatsu-reg-cols tatsu-clearfix tatsu-5j7Q80VCMw"
+          >
+            <div class="tatsu-row">
+              <div
+                class="tatsu-column tatsu-bg-overlay tatsu-one-col tatsu-column-image-none tatsu-column-effect-none tatsu-oDJnr__cjX"
+                data-parallax-speed="0"
+              >
+                <div class="tatsu-column-inner">
+                  <div class="tatsu-column-pad-wrap">
+                    <div class="tatsu-column-pad">
+                      <div
+                        class="tatsu-module tatsu-text-block-wrap tatsu-8xn16uVBCC"
+                      >
+                        <div
+                          class="tatsu-text-inner tatsu-align-center clearfix"
+                        >
+                          <h2>Censurado ALPR</h2>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tatsu-column-bg-image-wrap">
+                    <div class="tatsu-column-bg-image"></div>
+                  </div>
+                  <div
+                    class="tatsu-overlay tatsu-column-overlay tatsu-animate-none"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tatsu-row-wrap tatsu-wrap tatsu-row-has-one-half tatsu-row-has-two-cols tatsu-medium-gutter tatsu-reg-cols tatsu-clearfix tatsu-lKClp6q5N7"
+          >
+            <div class="tatsu-row">
+              <div
+                class="tatsu-column tatsu-bg-overlay tatsu-one-half tatsu-column-image-none tatsu-column-effect-none tatsu-VFUe4Cesna"
+                data-parallax-speed="0"
+              >
+                <div class="tatsu-column-inner">
+                  <div class="tatsu-column-pad-wrap">
+                    <div class="tatsu-column-pad">
+                      <div
+                        class="tatsu-single-image tatsu-module align-center tatsu-cjHGr7K47"
+                      >
+                        <div
+                          class="tatsu-single-image-inner"
+                          style="width: 735px"
+                        >
+                          <div
+                            class="tatsu-single-image-padding-wrap"
+                            style="padding-bottom: 56.734693877551%"
+                          ></div>
+                          <a
+                            class="mfp-image"
+                            href="assets/images/anpr/section-2-ticks/lexus-blur.jpg"
+                            ><img
+                              class="tatsu-gradient-border lazyloaded"
+                              alt="Blur license plates software"
+                              src="assets/images/anpr/section-2-ticks/lexus-blur.jpg"
+                              data-ll-status="loaded" /><noscript
+                              ><img
+                                class="tatsu-gradient-border"
+                                alt="Blur license plates software"
+                                src="assets/images/anpr/section-2-ticks/lexus-blur.jpg" /></noscript
+                          ></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tatsu-column-bg-image-wrap">
+                    <div class="tatsu-column-bg-image"></div>
+                  </div>
+                  <div
+                    class="tatsu-overlay tatsu-column-overlay tatsu-animate-none"
+                  ></div>
+                </div>
+              </div>
+              <div
+                class="tatsu-column tatsu-bg-overlay tatsu-one-half tatsu-column-image-none tatsu-column-effect-none tatsu-9rlOk0MWgZ"
+                data-parallax-speed="0"
+              >
+                <div class="tatsu-column-inner">
+                  <div class="tatsu-column-pad-wrap">
+                    <div class="tatsu-column-pad">
+                      <div
+                        class="tatsu-module tatsu-text-block-wrap tatsu-9_UVcC96BP"
+                      >
+                        <div
+                          class="tatsu-text-inner tatsu-align-center clearfix"
+                        >
+                          <ul class="my-ul-li">
+                            <li>
+                              <span class="dark-span">INPUT: </span>Recibe
+                              imagen en cualquier formato.
+                            </li>
+                            <li>
+                              <span class="dark-span">OUTPUT: </span>Censura
+                              todas las matrículas de la imagen.
+                            </li>
+                            <li>
+                              <span class="dark-span">HARDWARE: </span>Funciona
+                              en Linux o Windows sin Internet requerido.
+                            </li>
+                            <li>
+                              <span class="dark-span">VELOCIDAD: </span>Es
+                              Rápido y Eficiente, preocesando imagenes a &lt;50
+                              ms /imagen.
+                            </li>
+                            <li>
+                              <span class="dark-span">MÁS: </span>
+                              <a href="https://docs.reconocematriculas.com/">Código</a>
+                              en 8 lenguajes. Permite ajustar el nivel de blur!
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div
+                        class="tatsu-module tatsu-normal-button tatsu-button-wrap align-block block-right tatsu-Pv-DNjoRe"
+                      >
+                        <a
+                          class="tatsu-shortcode mediumbtn tatsu-button left-icon rounded bg-animation-none"
+                          href="https://reconocematriculas.com/blur/"
+                          aria-label="Learn More"
+                          data-gdpr-atts="{}"
+                          >Saber Más</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tatsu-column-bg-image-wrap">
+                    <div class="tatsu-column-bg-image"></div>
+                  </div>
+                  <div
+                    class="tatsu-overlay tatsu-column-overlay tatsu-animate-none"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tatsu-section-background-wrap">
+          <div class="tatsu-section-background"></div>
+        </div>
+        <div class="tatsu-overlay tatsu-section-overlay"></div>
+      </div>
+      <div
+        class="tatsu-FC583fD0C tatsu-section tatsu-bg-overlay home-eight tatsu-clearfix"
+        data-title="Better_ALPR"
+        data-headerscheme="background--dark"
+      >
+        <div
+          class="tatsu-section-pad clearfix"
+          data-padding='{"d":"50px 0px 50px 0px"}'
+          data-padding-top="50px"
+        >
+          <div
+            class="tatsu-row-wrap tatsu-wrap tatsu-row-one-col tatsu-row-has-one-cols tatsu-medium-gutter tatsu-reg-cols tatsu-clearfix tatsu-fUUqB-Ka5C"
+          >
+            <div class="tatsu-row">
+              <div
+                class="tatsu-column tatsu-bg-overlay tatsu-one-col tatsu-column-image-none tatsu-column-effect-none tatsu-_GBOerD717"
+                data-parallax-speed="0"
+              >
+                <div class="tatsu-column-inner">
+                  <div class="tatsu-column-pad-wrap">
+                    <div class="tatsu-column-pad">
+                      <div
+                        class="tatsu-module tatsu-text-block-wrap tatsu-ya_LPIQ5np"
+                      >
+                        <div
+                          class="tatsu-text-inner tatsu-align-center clearfix"
+                        >
+                          <h2 class="white-h2">Mejor ALPR</h2>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tatsu-column-bg-image-wrap">
+                    <div class="tatsu-column-bg-image"></div>
+                  </div>
+                  <div
+                    class="tatsu-overlay tatsu-column-overlay tatsu-animate-none"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tatsu-row-wrap tatsu-wrap tatsu-row-has-one-half tatsu-row-has-two-cols tatsu-medium-gutter tatsu-reg-cols tatsu-clearfix tatsu-ENnne7x0yR"
+          >
+            <div class="tatsu-row">
+              <div
+                class="tatsu-column tatsu-bg-overlay tatsu-one-half tatsu-column-image-none tatsu-column-effect-none tatsu-Br_ujjpHO"
+                data-parallax-speed="0"
+              >
+                <div class="tatsu-column-inner">
+                  <div class="tatsu-column-pad-wrap">
+                    <div class="tatsu-column-pad">
+                      <div
+                        class="tatsu-module tatsu-text-block-wrap tatsu-2RunHAGGw"
+                      >
+                        <div
+                          class="tatsu-text-inner tatsu-align-center clearfix"
+                        >
+                          <p>
+                            <strong>El Entorno Importa</strong>. Es fácil
+                            decodificar la matrícula de en una foto de alta
+                            resolución en un día soleado. Pero sabemos que en
+                            realidad el clima y otras condiciones no siempre son
+                            ideales. Hemos mejorado incansablemente nuestros
+                            algoritmos para admitir los factores de la "vida
+                            real", como el resplandor del sol, imágenes
+                            borrosas, vehículos rápidos, de noche y mucho más.
+                          </p>
+                          <p>
+                            <strong>Mejora Continua</strong>. Nuestro motor ALPR
+                            es como un niño, sigue aprendiendo sin limitaciones.
+                            Además podemos ajustar nuestro motor para ayudarlo a
+                            cumplir con sus necesidades específicas, como un
+                            cierto ángulo de cámara o condición de iluminación.
+                            Vea cómo trabajamos para mejorar nuestro
+                            <a href="https://reconocematriculas.com/blog/anpr-for-india/"
+                              >ALPR para India</a
+                            >&nbsp; y sus particularidades!
+                          </p>
+                          <p>
+                            <strong>Optimizado por Región</strong>. No todas las
+                            matrículas son iguales. Algunos tienen dos filas de
+                            texto. Otras tienen iconos al principio, en el medio
+                            o al final. Algunos contienen fuentes elegantes,
+                            otras no tanto. Nuestro motor ALPR los admite a
+                            todos y es ajustado específicamente para su región.
+                          </p>
+                          <p>
+                            <strong>5 es Mejor que 1</strong>. A diferencia de
+                            otros proveedores de LPR Software, nosotros podemos
+                            devolver hasta 5 decodificados de matrícula de una
+                            sola imagen. Logramos esto utilizando dos redes
+                            neuronales distintas de forma conjunta. Una
+                            identifica todas las matrículas de cada imagen y la
+                            otra decodifica cada carácter de cada matrícula.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tatsu-column-bg-image-wrap">
+                    <div class="tatsu-column-bg-image"></div>
+                  </div>
+                  <div
+                    class="tatsu-overlay tatsu-column-overlay tatsu-animate-none"
+                  ></div>
+                </div>
+              </div>
+              <div
+                class="tatsu-column tatsu-bg-overlay tatsu-one-half tatsu-column-image-none tatsu-column-effect-none tatsu-JCMekH1EGC"
+                data-parallax-speed="0"
+              >
+                <div class="tatsu-column-inner">
+                  <div class="tatsu-column-pad-wrap">
+                    <div class="tatsu-column-pad">
+                      <div
+                        class="tatsu-single-image tatsu-module tatsu-LJNSt2iad"
+                      >
+                        <div
+                          class="tatsu-single-image-inner"
+                          style="width: 800px"
+                        >
+                          <div
+                            class="tatsu-single-image-padding-wrap"
+                            style="padding-bottom: 80.125%"
+                          ></div>
+                          <a
+                            class="mfp-image"
+                            href="assets/images/anpr/section-2-ticks/escarabajo-mejor.jpg"
+                            ><img
+                              class="tatsu-gradient-border lazyloaded"
+                              alt="License-plate-recognition-neural-networks"
+                              src="assets/images/anpr/section-2-ticks/escarabajo-mejor.jpg"
+                              data-ll-status="loaded" /><noscript
+                              ><img
+                                class="tatsu-gradient-border"
+                                alt="License-plate-recognition-neural-networks"
+                                src="assets/images/anpr/section-2-ticks/escarabajo-mejor.jpg" /></noscript
+                          ></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tatsu-column-bg-image-wrap">
+                    <div class="tatsu-column-bg-image"></div>
+                  </div>
+                  <div
+                    class="tatsu-overlay tatsu-column-overlay tatsu-animate-none"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tatsu-section-background-wrap">
+          <div class="tatsu-section-background"></div>
+        </div>
+        <div class="tatsu-overlay tatsu-section-overlay"></div>
+      </div>
+      <div
+        class="tatsu-LVysD21MR tatsu-section tatsu-bg-overlay tatsu-clearfix"
+        data-title="ReduceFalsePositives"
+        data-headerscheme="background--dark"
+      >
+        <div
+          class="tatsu-section-pad clearfix"
+          data-padding='{"d":"50px 0px 50px 0px"}'
+          data-padding-top="50px"
+        >
+          <div
+            class="tatsu-row-wrap tatsu-wrap tatsu-row-one-col tatsu-row-has-one-cols tatsu-medium-gutter tatsu-reg-cols tatsu-clearfix tatsu-ghkDg-NDyx"
+          >
+            <div class="tatsu-row">
+              <div
+                class="tatsu-column tatsu-bg-overlay tatsu-one-col tatsu-column-image-none tatsu-column-effect-none tatsu-T--QxLWpey"
+                data-parallax-speed="0"
+              >
+                <div class="tatsu-column-inner">
+                  <div class="tatsu-column-pad-wrap">
+                    <div class="tatsu-column-pad">
+                      <div
+                        class="tatsu-module tatsu-text-block-wrap tatsu-Fptqjse4CM"
+                      >
+                        <div
+                          class="tatsu-text-inner tatsu-align-center clearfix"
+                        >
+                          <h2>Mínimos Falsos Positivos</h2>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tatsu-column-bg-image-wrap">
+                    <div class="tatsu-column-bg-image"></div>
+                  </div>
+                  <div
+                    class="tatsu-overlay tatsu-column-overlay tatsu-animate-none"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tatsu-row-wrap tatsu-wrap tatsu-row-one-col tatsu-row-has-one-cols tatsu-medium-gutter tatsu-reg-cols tatsu-clearfix tatsu-MZn2rI0G_b"
+          >
+            <div class="tatsu-row">
+              <div
+                class="tatsu-column tatsu-bg-overlay tatsu-one-col tatsu-column-image-none tatsu-column-effect-none tatsu-Tj_m4K5YxK"
+                data-parallax-speed="0"
+              >
+                <div class="tatsu-column-inner">
+                  <div class="tatsu-column-pad-wrap">
+                    <div class="tatsu-column-pad">
+                      <div
+                        class="tatsu-single-image tatsu-module align-center tatsu-h_IKWPjG0S"
+                      >
+                        <div
+                          class="tatsu-single-image-inner"
+                          style="width: 1920px"
+                        >
+                          <div
+                            class="tatsu-single-image-padding-wrap"
+                            style="padding-bottom: 44.270833333333%"
+                          ></div>
+                          <a
+                            class="mfp-image"
+                            href="assets/images/anpr/section-2-ticks/false-positives.webp"
+                            ><img
+                              class="tatsu-gradient-border lazyloaded"
+                              alt="ALPR reduce false positives license plate recognition"
+                              src="assets/images/anpr/section-2-ticks/false-positives.webp"
+                              data-ll-status="loaded" /><noscript
+                              ><img
+                                class="tatsu-gradient-border"
+                                alt="ALPR reduce false positives license plate recognition"
+                                src="assets/images/anpr/section-2-ticks/false-positives.webp" /></noscript
+                          ></a>
+                        </div>
+                      </div>
+                      <div
+                        class="tatsu-module tatsu-text-block-wrap tatsu-rp2yyJHSWs"
+                      >
+                        <div
+                          class="tatsu-text-inner tatsu-align-center clearfix"
+                        >
+                          <p style="text-align: center">
+                            Reducí los Falsos Positivos con Reconoce Matrículas.
+                            &nbsp;Ver Resultados de Nuestras
+                            <a href="https://reconocematriculas.com/alpr-results">Pruebas</a
+                            >!
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tatsu-column-bg-image-wrap">
+                    <div class="tatsu-column-bg-image"></div>
+                  </div>
+                  <div
+                    class="tatsu-overlay tatsu-column-overlay tatsu-animate-none"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tatsu-section-background-wrap">
+          <div class="tatsu-section-background"></div>
+        </div>
+        <div class="tatsu-overlay tatsu-section-overlay"></div>
+      </div>
+
+
+      <!-- <div
+        class="tatsu-ObtCB_p-5 tatsu-section tatsu-bg-overlay home-twel tatsu-clearfix"
+        data-title="LoveFromAroundWorld"
+        data-headerscheme="background--dark"
+      >
+        <div
+          class="tatsu-section-pad clearfix"
+          data-padding='{"d":"50px 0px 50px 0px"}'
+          data-padding-top="50px"
+        >
+          <div
+            class="tatsu-row-wrap tatsu-wrap tatsu-row-one-col tatsu-row-has-one-cols tatsu-medium-gutter tatsu-reg-cols tatsu-clearfix tatsu-4gY5tS6HIA"
+          >
+            <div class="tatsu-row">
+              <div
+                class="tatsu-column tatsu-bg-overlay tatsu-one-col tatsu-column-image-none tatsu-column-effect-none tatsu-Dyv7zY_JWQ"
+                data-parallax-speed="0"
+              >
+                <div class="tatsu-column-inner">
+                  <div class="tatsu-column-pad-wrap">
+                    <div class="tatsu-column-pad">
+                      <div
+                        class="tatsu-module tatsu-text-block-wrap tatsu-dpjrAN6wDr"
+                      >
+                        <div
+                          class="tatsu-text-inner tatsu-align-center clearfix"
+                        >
+                          <h2>Clientes Felices</h2>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tatsu-column-bg-image-wrap">
+                    <div class="tatsu-column-bg-image"></div>
+                  </div>
+                  <div
+                    class="tatsu-overlay tatsu-column-overlay tatsu-animate-none"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tatsu-row-wrap tatsu-wrap tatsu-row-one-col tatsu-row-has-one-cols tatsu-medium-gutter tatsu-reg-cols tatsu-clearfix tatsu-NJx7yPRoGo"
+          >
+            <div class="tatsu-row">
+              <div
+                class="tatsu-column tatsu-bg-overlay tatsu-one-col tatsu-column-image-none tatsu-column-effect-none tatsu-z9jowHyKv"
+                data-parallax-speed="0"
+              >
+                <div class="tatsu-column-inner">
+                  <div class="tatsu-column-pad-wrap">
+                    <div class="tatsu-column-pad">
+                      <div
+                        class="tatsu-testimonials-wrap tatsu-module clearfix tatsu-Wv2UQlq7Wd"
+                      >
+                        <div
+                          class="tatsu-testimonials be-slider tatsu-testimonial-style1 tatsu-testimonial-align-center flickity-enabled is-draggable"
+                          data-infinite="1"
+                          data-adaptive-height="1"
+                          data-dots="1"
+                          data-auto-play="2000"
+                          data-arrows="1"
+                          data-outer-arrows="1"
+                          tabindex="0"
+                          style="padding: 0px 50px; margin: 0px -50px"
+                        >
+                          <div
+                            class="flickity-viewport"
+                            style="height: 126px; touch-action: pan-y"
+                          >
+                            <div
+                              class="flickity-slider"
+                              style="left: 0px; transform: translateX(-100%)"
+                            >
+                              <div
+                                class="tatsu-testimonial be-slide tatsu-mXQ3ipYEZ"
+                                aria-selected="false"
+                                style="position: absolute; left: 0%"
+                              >
+                                <div
+                                  class="tatsu-testimonial-content-image-wrap"
+                                >
+                                  <div class="tatsu-testimonial-author-image">
+                                    <img
+                                      src="assets/images/anpr/section-3-carousels/clientes-baywatch.webp"
+                                    />
+                                  </div>
+                                  <div class="tatsu-testimonial-content">
+                                    <p>
+                                      The Reconoce Matriculas team has been
+                                      second to none as we developed our
+                                      product. They are our partners for the
+                                      long term!
+                                    </p>
+                                  </div>
+                                </div>
+                                <div
+                                  class="tatsu-testimonial-author-details-wrap"
+                                >
+                                  <div class="tatsu-testimonial-author h6">
+                                    Caleb W., CEO
+                                  </div>
+                                  <div class="tatsu-testimonial-author-role h9">
+                                    USA
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                class="tatsu-testimonial be-slide tatsu-5Y7iH9TMa is-selected"
+                                aria-selected="true"
+                                style="position: absolute; left: 100%"
+                              >
+                                <div
+                                  class="tatsu-testimonial-content-image-wrap"
+                                >
+                                  <div class="tatsu-testimonial-author-image">
+                                    <img
+                                      src="assets/images/anpr/section-3-carousels/rinaldi_black.png"
+                                    />
+                                  </div>
+                                  <div class="tatsu-testimonial-content">
+                                    <p>
+                                      Reconoce Matrículas is highly responsive
+                                      to our business and technical needs. CEMB
+                                    </p>
+                                  </div>
+                                </div>
+                                <div
+                                  class="tatsu-testimonial-author-details-wrap"
+                                >
+                                  <div class="tatsu-testimonial-author h6">
+                                    Giancarlo T., Product Manager
+                                  </div>
+                                  <div class="tatsu-testimonial-author-role h9">
+                                    Italy
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                class="tatsu-testimonial be-slide tatsu-K3Z6vVVbd"
+                                aria-selected="false"
+                                style="position: absolute; left: 200%"
+                              >
+                                <div
+                                  class="tatsu-testimonial-content-image-wrap"
+                                >
+                                  <div class="tatsu-testimonial-author-image">
+                                    <img
+                                      src="assets/images/anpr/section-3-carousels/clientes-cloud.png"
+                                    />
+                                  </div>
+                                  <div class="tatsu-testimonial-content">
+                                    <p>
+                                      Reconoce Matrículas ALPR is powerful and
+                                      accurate. We are thankful for a fruitful
+                                      partnership.
+                                    </p>
+                                  </div>
+                                </div>
+                                <div
+                                  class="tatsu-testimonial-author-details-wrap"
+                                >
+                                  <div class="tatsu-testimonial-author h6">
+                                    Renato L., CTO
+                                  </div>
+                                  <div class="tatsu-testimonial-author-role h9">
+                                    Brazil
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                class="tatsu-testimonial be-slide tatsu-EQV20iJ7G"
+                                aria-selected="false"
+                                style="position: absolute; left: 300%"
+                              >
+                                <div
+                                  class="tatsu-testimonial-content-image-wrap"
+                                >
+                                  <div class="tatsu-testimonial-author-image">
+                                    <img
+                                      src="assets/images/anpr/section-3-carousels/clientes-futech.png"
+                                    />
+                                  </div>
+                                  <div class="tatsu-testimonial-content">
+                                    <p>
+                                      The Reconoce Matrículas team is always
+                                      there to support us whenever we need it.
+                                    </p>
+                                  </div>
+                                </div>
+                                <div
+                                  class="tatsu-testimonial-author-details-wrap"
+                                >
+                                  <div class="tatsu-testimonial-author h6">
+                                    Dinh T, CEO
+                                  </div>
+                                  <div class="tatsu-testimonial-author-role h9">
+                                    Vietnam
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                class="tatsu-testimonial be-slide tatsu-qpMgaTHTA"
+                                aria-selected="false"
+                                style="position: absolute; left: 400%"
+                              >
+                                <div
+                                  class="tatsu-testimonial-content-image-wrap"
+                                >
+                                  <div class="tatsu-testimonial-author-image">
+                                    <img
+                                      src="assets/images/anpr/section-3-carousels/clientes-divrt.webp"
+                                    />
+                                  </div>
+                                  <div class="tatsu-testimonial-content">
+                                    <p>
+                                      We selected Reconoce Matrículas after some
+                                      rigorous benchmarking — and never looked
+                                      back!
+                                    </p>
+                                  </div>
+                                </div>
+                                <div
+                                  class="tatsu-testimonial-author-details-wrap"
+                                >
+                                  <div class="tatsu-testimonial-author h6">
+                                    Ramkumar S, Director
+                                  </div>
+                                  <div class="tatsu-testimonial-author-role h9">
+                                    USA &amp; India
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                class="tatsu-testimonial be-slide tatsu-6nOxyyjRa"
+                                aria-selected="false"
+                                style="position: absolute; left: 500%"
+                              >
+                                <div
+                                  class="tatsu-testimonial-content-image-wrap"
+                                >
+                                  <div class="tatsu-testimonial-author-image">
+                                    <img
+                                      src="assets/images/anpr/section-3-carousels/clientes-qtech.webp"
+                                    />
+                                  </div>
+                                  <div class="tatsu-testimonial-content">
+                                    <p>
+                                      Reconoce Matrículas is committed to our
+                                      success and is super-easy to work with!
+                                    </p>
+                                  </div>
+                                </div>
+                                <div
+                                  class="tatsu-testimonial-author-details-wrap"
+                                >
+                                  <div class="tatsu-testimonial-author h6">
+                                    Sacha D., CTO
+                                  </div>
+                                  <div class="tatsu-testimonial-author-role h9">
+                                    Brazil
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <button
+                            class="flickity-button flickity-prev-next-button previous"
+                            type="button"
+                            aria-label="Previous"
+                          >
+                            <svg
+                              class="flickity-button-icon"
+                              viewBox="0 0 100 100"
+                            >
+                              <path
+                                d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z"
+                                class="arrow"
+                              ></path>
+                            </svg></button
+                          ><button
+                            class="flickity-button flickity-prev-next-button next"
+                            type="button"
+                            aria-label="Next"
+                          >
+                            <svg
+                              class="flickity-button-icon"
+                              viewBox="0 0 100 100"
+                            >
+                              <path
+                                d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z"
+                                class="arrow"
+                                transform="translate(100, 100) rotate(180) "
+                              ></path>
+                            </svg>
+                          </button>
+                          <ol class="flickity-page-dots">
+                            <li class="dot" aria-label="Page dot 1"></li>
+                            <li
+                              class="dot is-selected"
+                              aria-label="Page dot 2"
+                              aria-current="step"
+                            ></li>
+                            <li class="dot" aria-label="Page dot 3"></li>
+                            <li class="dot" aria-label="Page dot 4"></li>
+                            <li class="dot" aria-label="Page dot 5"></li>
+                            <li class="dot" aria-label="Page dot 6"></li>
+                          </ol>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tatsu-column-bg-image-wrap">
+                    <div class="tatsu-column-bg-image"></div>
+                  </div>
+                  <div
+                    class="tatsu-overlay tatsu-column-overlay tatsu-animate-none"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tatsu-section-background-wrap">
+          <div class="tatsu-section-background"></div>
+        </div>
+        <div class="tatsu-overlay tatsu-section-overlay"></div>
+      </div> -->
+
+      <!-- inicio de section (creo) -->
+
+      <div
+        class="tatsu-xrmaVf-nY tatsu-section tatsu-bg-overlay home-ten tatsu-clearfix"
+        data-title="Some_ALPR_Applications"
+        data-headerscheme="background--dark"
+      >
+        <div
+          class="tatsu-section-pad clearfix"
+          data-padding='{"d":"50px 0px 50px 0px"}'
+          data-padding-top="50px"
+        >
+          <div
+            class="tatsu-row-wrap tatsu-wrap tatsu-row-one-col tatsu-row-has-one-cols tatsu-medium-gutter tatsu-reg-cols tatsu-clearfix tatsu-tgqy6U9zw0"
+          >
+            <div class="tatsu-row">
+              <div
+                class="tatsu-column tatsu-bg-overlay tatsu-one-col tatsu-column-image-none tatsu-column-effect-none tatsu-ePlxaXjYsq"
+                data-parallax-speed="0"
+              >
+                <div class="tatsu-column-inner">
+                  <div class="tatsu-column-pad-wrap">
+                    <div class="tatsu-column-pad">
+                      <div
+                        class="tatsu-module tatsu-text-block-wrap tatsu-ouXdGuCXBE"
+                      >
+                        <div
+                          class="tatsu-text-inner tatsu-align-center clearfix"
+                        >
+                          <h2>Algunas Aplicaciones</h2>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tatsu-column-bg-image-wrap">
+                    <div class="tatsu-column-bg-image"></div>
+                  </div>
+                  <div
+                    class="tatsu-overlay tatsu-column-overlay tatsu-animate-none"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tatsu-row-wrap tatsu-wrap tatsu-row-has-three-cols tatsu-medium-gutter tatsu-eq-cols tatsu-clearfix tatsu-9A2C4mxCGy"
+          >
+            <div class="tatsu-row">
+              <div
+                class="tatsu-column tatsu-bg-overlay tatsu-one-third tatsu-column-image-none tatsu-column-effect-none home-ten-border tatsu-lMoC_8fHde"
+                data-parallax-speed="0"
+              >
+                <div class="tatsu-column-inner">
+                  <div class="tatsu-column-pad-wrap">
+                    <div class="tatsu-column-pad">
+                      <div
+                        class="tatsu-module tatsu-text-block-wrap tatsu-fP4J0bDPAs"
+                      >
+                        <div
+                          class="tatsu-text-inner tatsu-align-center clearfix"
+                        >
+                          <div class="home-ten-box">
+                            <h5>Parking Management</h5>
+                            <p>
+                              Asegurate que los vehículos se encuentren
+                              respetando las normas de tu estacionamiento.
+                              <br />
+                              <a
+                                href="https://reconocematriculas.com/?utm_source=pr&amp;utm_medium=website"
+                                >Ejemplos</a
+                              >
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tatsu-column-bg-image-wrap">
+                    <div class="tatsu-column-bg-image"></div>
+                  </div>
+                  <div
+                    class="tatsu-overlay tatsu-column-overlay tatsu-animate-none"
+                  ></div>
+                </div>
+              </div>
+              <div
+                class="tatsu-column tatsu-bg-overlay tatsu-one-third tatsu-column-image-none tatsu-column-effect-none home-ten-border tatsu-c-cxsxL4sF"
+                data-parallax-speed="0"
+              >
+                <div class="tatsu-column-inner">
+                  <div class="tatsu-column-pad-wrap">
+                    <div class="tatsu-column-pad">
+                      <div
+                        class="tatsu-module tatsu-text-block-wrap tatsu-f7hGy3bGsC"
+                      >
+                        <div
+                          class="tatsu-text-inner tatsu-align-center clearfix"
+                        >
+                          <div class="home-ten-box">
+                            <h5>Monitoreo de Rutas</h5>
+                            <p>
+                              Monitorea vehículos en diferentes lugares de rutas
+                              o autopistas, identifica vehículos robados,
+                              infractores repetidos, y más!
+                              <br />
+                              <a
+                                href="https://reconocematriculas.com/?utm_source=pr&amp;utm_medium=website"
+                                >Ejemplos</a
+                              >.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tatsu-column-bg-image-wrap">
+                    <div class="tatsu-column-bg-image"></div>
+                  </div>
+                  <div
+                    class="tatsu-overlay tatsu-column-overlay tatsu-animate-none"
+                  ></div>
+                </div>
+              </div>
+              <div
+                class="tatsu-column tatsu-bg-overlay tatsu-one-third tatsu-column-image-none tatsu-column-effect-none tatsu-W6BsbQ-8D3"
+                data-parallax-speed="0"
+              >
+                <div class="tatsu-column-inner">
+                  <div class="tatsu-column-pad-wrap">
+                    <div class="tatsu-column-pad">
+                      <div
+                        class="tatsu-module tatsu-text-block-wrap tatsu-D_YFIbysJ9"
+                      >
+                        <div
+                          class="tatsu-text-inner tatsu-align-center clearfix"
+                        >
+                          <div class="home-ten-box">
+                            <h5>Control de Peajes</h5>
+                            <p>
+                              Recolecte el ID de usuario automáticamente basado
+                              en su matrícula y sin necesidad de los anticuados
+                              RFID!
+                              <br />
+                              <a
+                                href="https://reconocematriculas.com/?utm_source=pr&amp;utm_medium=website"
+                                >Ejemplos</a
+                              >.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tatsu-column-bg-image-wrap">
+                    <div class="tatsu-column-bg-image"></div>
+                  </div>
+                  <div
+                    class="tatsu-overlay tatsu-column-overlay tatsu-animate-none"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tatsu-section-background-wrap">
+          <div class="tatsu-section-background"></div>
+        </div>
+        <div class="tatsu-overlay tatsu-section-overlay"></div>
+      </div>
+
+      <div class="be-themes-comments exp-wrap">
+        <div
+          id="comments"
+          class="exp-comments exp-comments-without-content"
+        ></div>
+      </div>
+
+
+      <!-- inicio section -->
+
+      <div
+        class="tatsu-mvT1aAg5Q tatsu-section tatsu-bg-overlay home-nine tatsu-clearfix"
+        data-title="Test_Drive_ALPR_Free"
+        data-headerscheme="background--dark"
+      >
+        <div
+          class="tatsu-section-pad clearfix"
+          data-padding='{"d":"50px 0px 50px 0px"}'
+          data-padding-top="50px"
+        >
+          <div
+            class="tatsu-row-wrap tatsu-wrap tatsu-row-one-col tatsu-row-has-one-cols tatsu-medium-gutter tatsu-reg-cols tatsu-clearfix tatsu-ArHF909xtP"
+          >
+            <div class="tatsu-row">
+              <div
+                class="tatsu-column tatsu-bg-overlay tatsu-one-col tatsu-column-image-none tatsu-column-effect-none tatsu-8bYTdPl4iD"
+                data-parallax-speed="0"
+              >
+                <div class="tatsu-column-inner">
+                  <div class="tatsu-column-pad-wrap">
+                    <div class="tatsu-column-pad">
+                      <div
+                        class="tatsu-module tatsu-text-block-wrap tatsu-N63WpQXxYg"
+                      >
+                        <div
+                          class="tatsu-text-inner tatsu-align-center clearfix"
+                        >
+                          <h2 class="white-h2">Prueba</h2>
+                          <p class="white-p">
+                            Contactanos y obtené una prueba gratuita de Snapshot
+                            o Stream!
+                            <br />
+                            Podes ver nuestros
+                            <span style="text-decoration: underline"
+                              ><a href="https://reconocematriculas.com/pricing/"
+                                >Precios</a
+                              ></span
+                            >
+                            según tus necesidades.
+                            <br>
+                            Soportamos más de
+                            <span style="text-decoration: underline"
+                              ><a href="https://reconocematriculas.com/countries/"
+                            >200 países</a></span
+                            >
+                            en todo el mundo!
+                          </p>
+                        </div>
+                      </div>
+                      <div
+                        class="tatsu-module tatsu-normal-button tatsu-button-wrap align-block block-center tatsu-qnJWJ7M1oF"
+                      >
+                        <a
+                          class="tatsu-shortcode mediumbtn tatsu-button left-icon rounded bg-animation-none"
+                          href="https://app.reconocematriculas.com/accounts/signup/"
+                          aria-label="Get Started"
+                          data-gdpr-atts="{}"
+                          >Empezar Ahora</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tatsu-column-bg-image-wrap">
+                    <div class="tatsu-column-bg-image"></div>
+                  </div>
+                  <div
+                    class="tatsu-overlay tatsu-column-overlay tatsu-animate-none"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="tatsu-section-background-wrap">
+          <div class="tatsu-section-background"></div>
+        </div>
+        <div class="tatsu-overlay tatsu-section-overlay"></div>
+      </div>
+    </div>
+      <!-- INICIO footer   -->
+    
+    <div id="tatsu-footer-container">
+      <div
+        class="tatsu-5ixJR2HIxn tatsu-section tatsu-bg-overlay tatsu-clearfix"
+        data-title=""
+        data-headerscheme="background--dark"
+      >
+        <div
+          class="tatsu-section-pad clearfix"
+          data-padding='{"d":"40px 0px 30px 0px"}'
+          data-padding-top="40px"
+        >
+          <div
+            class="tatsu-row-wrap tatsu-wrap tatsu-row-has-three-cols tatsu-medium-gutter tatsu-eq-cols tatsu-clearfix tatsu-LeC0OHNOnY"
+          >
+            <div class="tatsu-row">
+              <div
+                class="tatsu-column tatsu-bg-overlay tatsu-one-third tatsu-column-image-none tatsu-column-effect-none footer-border tatsu-VN0PjPWzz"
+                data-parallax-speed="0"
+              >
+                <div class="tatsu-column-inner">
+                  <div class="tatsu-column-pad-wrap">
+                    <div class="tatsu-column-pad">
+                      <div
+                        class="tatsu-module tatsu-text-block-wrap tatsu-LtvIHHIso"
+                      >
+                        <div
+                          class="tatsu-text-inner tatsu-align-center clearfix"
+                        >
+                          <h5>Links</h5>
+                        </div>
+                      </div>
+                      <div
+                        class="tatsu-module tatsu-text-block-wrap tatsu-OUriS8I7S"
+                      >
+                        <div
+                          class="tatsu-text-inner tatsu-align-center clearfix"
+                        >
+                          <ul class="footer-ul-li">
+                            <li>
+                              <a
+                                href="https://reconocematriculas.com/contact/"
+                                target="_self"
+                                rel="noopener noreferrer"
+                                >Contacto</a
+                              >
+                            </li>
+                            <li>
+                              <a href="https://app.reconocematriculas.com/accounts/signup/"
+                                >Crear Cuenta / Iniciar Sesión</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                href="https://reconocematriculas.com/help/"
+                                target="_self"
+                                rel="noopener noreferrer"
+                                >Centro de Ayuda</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                href="https://reconocematriculas.com/gdpr-compliance-for-anpr/"
+                                target="_self"
+                                rel="noopener noreferrer"
+                                >GDPR Compliance</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                href="https://reconocematriculas.com/terms-of-use-privacy-policy/"
+                                target="_self"
+                                rel="noopener noreferrer"
+                                >Terms &amp; Privacy</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tatsu-column-bg-image-wrap">
+                    <div class="tatsu-column-bg-image"></div>
+                  </div>
+                  <div
+                    class="tatsu-overlay tatsu-column-overlay tatsu-animate-none"
+                  ></div>
+                </div>
+              </div>
+              <div
+                class="tatsu-column tatsu-bg-overlay tatsu-one-third tatsu-column-image-none tatsu-column-effect-none footer-border tatsu-0G1Dbkq9iP"
+                data-parallax-speed="0"
+              >
+                <div class="tatsu-column-inner">
+                  <div class="tatsu-column-pad-wrap">
+                    <div class="tatsu-column-pad">
+                      <div
+                        class="tatsu-module tatsu-text-block-wrap tatsu-D2Ss6j0B7"
+                      >
+                        <div
+                          class="tatsu-text-inner tatsu-align-center clearfix"
+                        >
+                          <h5>Info</h5>
+                        </div>
+                      </div>
+                      <div
+                        class="tatsu-module tatsu-text-block-wrap tatsu-TyvnQzMHf"
+                      >
+                        <div
+                          class="tatsu-text-inner tatsu-align-center clearfix"
+                        >
+                          <ul class="footer-ul-li">
+                            <li>
+                              <a
+                                href="http://docs.reconocematriculas.com/#introduction"
+                                target="_self"
+                                rel="noopener noreferrer"
+                                >Snapshot API Documentación
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                href="https://reconocematriculas.com/blog/camera-setup"
+                                target="_self"
+                                rel="noopener noreferrer"
+                                >Setup Cámara para ANPR</a
+                              >
+                            </li>
+                            <li>
+                              <a href="https://reconocematriculas.com/integrations/"
+                                >VMS, Integraciones</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                href="https://reconocematriculas.com/number-plate-datasets"
+                                target="_self"
+                                rel="noopener noreferrer"
+                                >Datasets</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                href="https://reconocematriculas.com/blog/alpr-research"
+                                target="_self"
+                                rel="noopener noreferrer"
+                                >LPR Research</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tatsu-column-bg-image-wrap">
+                    <div class="tatsu-column-bg-image"></div>
+                  </div>
+                  <div
+                    class="tatsu-overlay tatsu-column-overlay tatsu-animate-none"
+                  ></div>
+                </div>
+              </div>
+              <div
+                class="tatsu-column tatsu-bg-overlay tatsu-one-third tatsu-column-image-none tatsu-column-effect-none tatsu-NTcjuTgkz1"
+                data-parallax-speed="0"
+              >
+                <div class="tatsu-column-inner">
+                  <div class="tatsu-column-pad-wrap">
+                    <div class="tatsu-column-pad">
+                      <div
+                        class="tatsu-module tatsu-text-block-wrap tatsu-UpA9ecoAA"
+                      >
+                        <div
+                          class="tatsu-text-inner tatsu-align-center clearfix"
+                        >
+                          <h5>Blog</h5>
+                        </div>
+                      </div>
+                      <div
+                        class="tatsu-module tatsu-text-block-wrap tatsu-1xzBsO_0o"
+                      >
+                        <div
+                          class="tatsu-text-inner tatsu-align-center clearfix"
+                        >
+                          <ul class="footer-ul-li">
+                            <li>
+                              <a
+                                href="https://reconocematriculas.com/blog/vehicle-make-model-recognition-with-color/"
+                                target="_self"
+                                rel="noopener noreferrer"
+                                >Reconocimiento</a
+                              >
+                            </li>
+                            <li>
+                              <a href="https://reconocematriculas.com/alpr-for-usa/"
+                                >ALPR para USA</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                href="https://reconocematriculas.com/blog/anpr-for-india/"
+                                target="_self"
+                                rel="noopener noreferrer"
+                                >ANPR para India</a
+                              >
+                            </li>
+                            <li>
+                              <a href="https://reconocematriculas.com/anpr-for-brazil/"
+                                >ANPR para Brazil</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                href="https://reconocematriculas.com/blog/blur-license-plates-for-foia/"
+                                target="_self"
+                                rel="noopener noreferrer"
+                                >Censura Matrículas</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tatsu-column-bg-image-wrap">
+                    <div class="tatsu-column-bg-image"></div>
+                  </div>
+                  <div
+                    class="tatsu-overlay tatsu-column-overlay tatsu-animate-none"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tatsu-section-background-wrap">
+          <div class="tatsu-section-background"></div>
+        </div>
+        <div class="tatsu-overlay tatsu-section-overlay"></div>
+      </div>
+      <div
+        class="tatsu-qJH03lkg9 tatsu-section tatsu-bg-overlay bottom-footer tatsu-clearfix"
+        data-title=""
+        data-headerscheme="background--dark"
+      >
+        <div
+          class="tatsu-section-pad clearfix"
+          data-padding='{"d":"20px 0px 20px 0px","l":"20px 0px 20px 0px"}'
+          data-padding-top="20px"
+        >
+          <div
+            class="tatsu-row-wrap tatsu-wrap tatsu-row-has-one-half tatsu-row-has-two-cols tatsu-medium-gutter tatsu-reg-cols tatsu-clearfix tatsu-49QMRrHfV-"
+          >
+            <div class="tatsu-row">
+              <div
+                class="tatsu-column tatsu-bg-overlay tatsu-one-half tatsu-column-image-none tatsu-column-effect-none tatsu-5ctCi3Pbh"
+                data-parallax-speed="0"
+              >
+                <div class="tatsu-column-inner">
+                  <div class="tatsu-column-pad-wrap">
+                    <div class="tatsu-column-pad">
+                      <div
+                        class="tatsu-module tatsu-text-block-wrap tatsu-tvdq77Fx6"
+                      >
+                        <div
+                          class="tatsu-text-inner tatsu-align-center clearfix"
+                        >
+                          <p class="copyright">
+                            © 2021 Reconoce Matriculas, subsidiaria de
+                            kpulpo, Inc. All rights reserved.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tatsu-column-bg-image-wrap">
+                    <div class="tatsu-column-bg-image"></div>
+                  </div>
+                  <div
+                    class="tatsu-overlay tatsu-column-overlay tatsu-animate-none"
+                  ></div>
+                </div>
+              </div>
+              <div
+                class="tatsu-column tatsu-bg-overlay tatsu-one-half tatsu-column-image-none tatsu-column-effect-none tatsu-1ERPAQYHp-"
+                data-parallax-speed="0"
+              >
+                <div class="tatsu-column-inner">
+                  <div class="tatsu-column-pad-wrap">
+                    <div class="tatsu-column-pad">
+                      <div
+                        class="tatsu-module tatsu-text-block-wrap tatsu-ozbutlAbS"
+                      >
+                        <div
+                          class="tatsu-text-inner tatsu-align-center clearfix"
+                        >
+                          <p class="copyright copyright-right">
+                            Made with <span class="red-span">❤</span> from
+                            Switzerland &amp; Argentina.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tatsu-column-bg-image-wrap">
+                    <div class="tatsu-column-bg-image"></div>
+                  </div>
+                  <div
+                    class="tatsu-overlay tatsu-column-overlay tatsu-animate-none"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tatsu-section-background-wrap">
+          <div class="tatsu-section-background"></div>
+        </div>
+        <div class="tatsu-overlay tatsu-section-overlay"></div>
+      </div>
+    </div>
+    <a href="#" id="be-themes-back-to-top" style="display: none"
+      ><svg
+        width="14"
+        height="9"
+        viewBox="0 0 14 9"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M13 7.37329L7 2.00004L1 7.37329"
+          stroke-width="2"
+          stroke-linecap="round"
+        ></path>
+      </svg>
+    </a>
+    <div
+      id="gdpr-popup"
+      class="be-gdpr-popup mfp-hide"
+      data-rel="gdpr-popup-gallery"
+    >
+      <div class="be-gdpr-modal">
+        <div class="be-modal-content-wrapper">
+          <div class="be-gdpr-modal-heading">Privacy Settings</div>
+          <div class="be-gdpr-modal-desc">
+            We use cookies to enhance your experience while using our website.
+            If you are using our Services via a browser you can restrict, block
+            or remove cookies through your web browser settings. We also use
+            content and scripts from third parties that may use tracking
+            technologies. You can selectively provide your consent below to
+            allow such third party embeds. For complete information about the
+            cookies we use, data we collect and how we process them, please
+            check our <a target="_blank" href="">Privacy Policy</a>
+          </div>
+          <div class="be-gdpr-modal-items">
+            <div class="be-gdpr-modal-item">
+              <div class="be-gdpr-modal-item-head">Youtube</div>
+              <div class="be-gdpr-modal-item-desc">
+                Consent to display content from Youtube
+              </div>
+              <div class="be-gdpr-modal-item-switch">
+                <label class="switch be-modal-switch">
+                  <input
+                    class="be-gdpr-switch-input"
+                    value="youtube"
+                    type="checkbox"
+                  />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+            <div class="be-gdpr-modal-item">
+              <div class="be-gdpr-modal-item-head">Vimeo</div>
+              <div class="be-gdpr-modal-item-desc">
+                Consent to display content from Vimeo
+              </div>
+              <div class="be-gdpr-modal-item-switch">
+                <label class="switch be-modal-switch">
+                  <input
+                    class="be-gdpr-switch-input"
+                    value="vimeo"
+                    type="checkbox"
+                  />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+            <div class="be-gdpr-modal-item">
+              <div class="be-gdpr-modal-item-head">Google Maps</div>
+              <div class="be-gdpr-modal-item-desc">
+                Consent to display content from Google
+              </div>
+              <div class="be-gdpr-modal-item-switch">
+                <label class="switch be-modal-switch">
+                  <input
+                    class="be-gdpr-switch-input"
+                    value="gmaps"
+                    type="checkbox"
+                  />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+            <div class="be-gdpr-modal-item">
+              <div class="be-gdpr-modal-item-head">Spotify</div>
+              <div class="be-gdpr-modal-item-desc">
+                Consent to display content from Spotify
+              </div>
+              <div class="be-gdpr-modal-item-switch">
+                <label class="switch be-modal-switch">
+                  <input
+                    class="be-gdpr-switch-input"
+                    value="spotify"
+                    type="checkbox"
+                  />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+            <div class="be-gdpr-modal-item">
+              <div class="be-gdpr-modal-item-head">Sound Cloud</div>
+              <div class="be-gdpr-modal-item-desc">
+                Consent to display content from Sound
+              </div>
+              <div class="be-gdpr-modal-item-switch">
+                <label class="switch be-modal-switch">
+                  <input
+                    class="be-gdpr-switch-input"
+                    value="soundcloud"
+                    type="checkbox"
+                  />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="be-gdpr-modal-footer">
+          <div
+            class="be-gdpr-modal-save-btn"
+            onclick="gdprSaveBtnClick(event);"
+          >
+            Save
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="tatsu-fixed-overlay"></div>
+    <div id="jquery-live-search" style="display: none"></div>
+  </body>
+</html>

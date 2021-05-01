@@ -1,0 +1,1811 @@
+/****************************************************
+Header Styles
+*****************************************************/
+
+.exponent-menu li a:hover,
+.exponent-menu li.current-menu-item > a,
+.exponent-mobile-menu li a:hover,
+.exponent-mobile-menu li.current-menu-item > a,
+.exponent-menu > ul > li:hover > a,
+.exponent-menu .exponent-sub-menu > li:hover > a {
+  color: rgba(0, 106, 255, 1);
+}
+.exponent-menu > ul > li:hover > .exponent-sub-menu-indicator svg polyline,
+.exponent-menu .exponent-sub-menu > li:hover svg polyline {
+  stroke: rgba(0, 106, 255, 1);
+}
+/**
+ * Common Styles
+ */
+blockquote {
+  border-left: 4px solid rgba(0, 106, 255, 1);
+}
+a {
+  color: rgba(0, 106, 255, 1);
+}
+
+.flickity-page-dots .dot.is-selected {
+  background: rgba(0, 106, 255, 1);
+}
+
+/**
+ * Form Styles
+ */
+
+.exp-form-border {
+  background-color: rgba(0, 106, 255, 1);
+}
+.exp-form-border-with-underline .exp-form-field-active .exp-form-field-label {
+  color: rgba(0, 106, 255, 1);
+}
+
+.exp-form-rounded input:not([type="submit"]):focus,
+.exp-form-rounded textarea:focus,
+.exp-form-rounded select:focus {
+  border-color: rgba(0, 106, 255, 1);
+}
+.exp-form-pill input:not([type="submit"]):focus,
+.exp-form-pill textarea:focus,
+.exp-form-pill select:focus {
+  border-color: rgba(0, 106, 255, 1);
+}
+
+.exp-form-pill input:not([type="submit"]),
+.exp-form-pill textarea,
+.exp-form-pill select,
+.exp-form-rounded input,
+.exp-form-rounded textarea,
+.exp-form-rounded select {
+  background-color: rgba(243, 245, 249, 1);
+}
+
+input[type="submit"] {
+  color: #ffffff;
+  background: rgba(0, 106, 255, 1);
+}
+
+/**
+ * Posts Styles
+ */
+
+.exp-post-categories-normal a:hover,
+.exp-post-title a:hover,
+.exp-post-author .exp-post-author-name:hover {
+  color: rgba(0, 106, 255, 1);
+}
+
+.pages_list a {
+  background: rgba(3, 27, 79, 1);
+  color: #ffffff;
+}
+
+.pages_list a:hover {
+  background: rgba(0, 106, 255, 1);
+  color: #ffffff;
+}
+
+.exp-categories-post-count {
+  color: rgba(0, 106, 255, 1);
+}
+
+.exp-archive-post-count {
+  color: rgba(0, 106, 255, 1);
+}
+
+.widget_calendar tbody a {
+  color: rgba(0, 106, 255, 1);
+}
+
+.exp-read-more.exp-read-more-underlined::after {
+  background: rgba(0, 106, 255, 1);
+}
+
+.exp-posts-nav {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.exp-home-grid-icon {
+  color: rgba(3, 27, 79, 1);
+}
+
+.exp-read-more-underlined {
+  color: rgba(3, 27, 79, 1);
+}
+.exp-read-more-underlined::before {
+  color: rgba(3, 27, 79, 1);
+}
+.exp-read-more-underlined:hover {
+  color: rgba(0, 106, 255, 1);
+}
+.exp-read-more-underlined:hover::after {
+  color: rgba(0, 106, 255, 1);
+}
+
+/**
+ * anchor styles
+ */
+
+.menu-item.current-menu-item > a {
+  color: rgba(0, 106, 255, 1);
+}
+
+.exp-breadcrumbs a:hover,
+.widget a:hover {
+  color: rgba(0, 106, 255, 1);
+}
+.widget .tag-cloud-link:hover {
+  background: rgba(0, 106, 255, 1);
+}
+
+.exp-post-single-footer-author {
+  background: #ffffff;
+}
+
+.exp-pagination .page-numbers:not(.current):hover {
+  background: rgba(243, 245, 249, 1);
+}
+
+.exp-post-single-footer-tags .exp-term:hover,
+.exp-pagination .current {
+  color: #ffffff;
+  background: rgba(0, 106, 255, 1);
+}
+.exp-pagination .current {
+  border-color: rgba(0, 106, 255, 1);
+  box-shadow: 0 7px 14px -6px rgba(0, 106, 255, 1);
+}
+.exp-pagination a:hover {
+  color: rgba(0, 106, 255, 1);
+}
+
+/**
+ * Comments
+ */
+#cancel-comment-reply-link:hover,
+.exp-comment-reply:hover {
+  color: rgba(0, 106, 255, 1);
+}
+
+/**
+ * Widgets
+ */
+.exp-archive-post-count,
+.exp-categories-post-count {
+  background: rgba(243, 245, 249, 1);
+}
+.exp-archive-widget-link:hover a {
+  color: rgba(0, 106, 255, 1);
+}
+.exp-archive-widget-link:hover .exp-archive-post-count {
+  background: rgba(0, 106, 255, 1);
+  color: #ffffff;
+}
+.exp-categories-widget-link:hover > a {
+  color: rgba(0, 106, 255, 1);
+}
+.exp-categories-widget-link:hover > .exp-categories-post-count {
+  color: #ffffff;
+  background: rgba(0, 106, 255, 1);
+}
+.widget_calendar tbody a {
+  background: rgba(243, 245, 249, 1);
+}
+#wp-calendar caption {
+  color: rgba(3, 27, 79, 1);
+}
+.widget_calendar tbody a:hover {
+  color: #ffffff;
+  background: rgba(0, 106, 255, 1);
+}
+.tagcloud .tag-cloud-link {
+  background: rgba(243, 245, 249, 1);
+}
+.tagcloud .tag-cloud-link:hover {
+  color: #ffffff;
+  background: rgba(0, 106, 255, 1);
+}
+
+/**
+ * Accordion Module
+ */
+.accordion-head:hover {
+  color: rgba(0, 106, 255, 1);
+}
+
+/** Loader color */
+.exp-subscribe-loader-inner {
+  border-color: rgba(243, 245, 249, 1);
+  border-left-color: rgba(0, 106, 255, 1);
+}
+
+#be-themes-page-loader .style-spin {
+  border: 7px solid rgba(0, 106, 255, 0.3);
+  border-top-color: rgba(0, 106, 255, 1);
+}
+
+#be-themes-page-loader .style-ring div {
+  border: 6px solid rgba(0, 106, 255, 0.6);
+  border-color: rgba(0, 106, 255, 0.6) transparent transparent transparent;
+}
+
+#be-themes-page-loader .style-ellipsis div {
+  background: rgba(0, 106, 255, 1);
+}
+
+#be-themes-page-loader .style-ripple div {
+  border: 4px solid rgba(0, 106, 255, 1);
+}
+
+/**
+ * Back to Top
+ */
+#be-themes-back-to-top {
+  background: rgba(0, 106, 255, 1);
+  color: #ffffff;
+}
+
+/**
+ * Backgrounds
+ */
+
+body {
+  background: rgba(255, 255, 255, 1);
+}
+
+/**
+ * Entry Header
+ */
+.exp-entry-header {
+  background: #f5f6fa;
+  color: #313233;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.exp-entry-header .exp-post-entry-title {
+  color: #313233;
+}
+
+.exp-breadcrumbs {
+  color: 1;
+}
+
+/**
+ * Search Form
+ */
+.search:focus ~ .exp-searchform-icon,
+.exp-form-field-active .exp-searchform-icon {
+  color: rgba(0, 106, 255, 1);
+}
+
+/**
+ * Woocommerce
+ */
+
+.woocommerce-orders-table a:hover {
+  color: rgba(0, 106, 255, 1);
+}
+
+.woocommerce-table--order-downloads td a:hover {
+  color: rgba(0, 106, 255, 1);
+}
+
+.exp-quick-view {
+  background: rgba(0, 106, 255, 1);
+  color: #ffffff;
+}
+
+.exp-wc-price-cart-wrap .exp-add-to-cart {
+  color: rgba(0, 106, 255, 1);
+}
+
+.exp-wc-meta-value a:hover {
+  color: rgba(0, 106, 255, 1);
+}
+
+.single_add_to_cart_button {
+  color: #ffffff;
+  background: rgba(0, 106, 255, 1);
+}
+.single_add_to_cart_button:hover {
+  color: rgba(0, 106, 255, 1);
+  background: #ffffff;
+  border: 1px solid rgba(0, 106, 255, 1);
+}
+
+.wc-tabs .active {
+  color: rgba(0, 106, 255, 1);
+  border-bottom: 2px solid rgba(0, 106, 255, 1);
+}
+
+.exp-product-categories a:hover {
+  color: rgba(0, 106, 255, 1);
+}
+
+.products .exp-product-title a:hover {
+  color: rgba(0, 106, 255, 1);
+}
+
+.exp-add-to-wishlist-icon:hover,
+.exp-already-in-wishlist {
+  color: rgba(0, 106, 255, 1);
+}
+.products .exp-already-in-wishlist-icon {
+  color: rgba(0, 106, 255, 1);
+}
+.exp-wc-product-info-inner .exp-add-to-wishlist:hover {
+  color: rgba(0, 106, 255, 1);
+}
+
+.exp-wc-add-to-cart-icon:hover {
+  color: rgba(0, 106, 255, 1);
+}
+
+.exp-wc-quickview .product_title:hover {
+  color: rgba(0, 106, 255, 1);
+}
+
+.woocommerce-mini-cart__buttons a {
+  color: #ffffff;
+  background: rgba(0, 106, 255, 1);
+}
+.woocommerce-mini-cart__buttons a:hover {
+  color: rgba(0, 106, 255, 1);
+  background: #ffffff;
+  border-color: rgba(0, 106, 255, 1);
+}
+
+.woocommerce-mini-cart__buttons .checkout {
+  color: rgba(0, 106, 255, 1);
+  background: #ffffff;
+}
+.woocommerce-mini-cart__buttons .checkout:hover {
+  color: #ffffff;
+  background: rgba(0, 106, 255, 1);
+}
+
+.exp-wc-cart-product-title:hover {
+  color: rgba(0, 106, 255, 1);
+}
+
+.grouped_form a:hover {
+  color: rgba(0, 106, 255, 1);
+}
+
+.product-categories .cat-item a:hover {
+  color: rgba(0, 106, 255, 1);
+}
+.product-categories .cat-item a:hover + .count > .exp-categories-post-count {
+  background: rgba(0, 106, 255, 1);
+  color: #ffffff;
+}
+
+.widget .price_slider {
+  background: rgba(243, 245, 249, 1);
+}
+
+.ui-slider-handle,
+.ui-slider-range {
+  border-color: rgba(0, 106, 255, 1);
+}
+
+.price_slider_amount button {
+  background: rgba(0, 106, 255, 1);
+}
+
+.woocommerce-widget-layered-nav-list__item .count {
+  color: rgba(0, 106, 255, 1);
+}
+.woocommerce-widget-layered-nav-list__item .count {
+  background: rgba(243, 245, 249, 1);
+}
+.woocommerce-widget-layered-nav-list__item > a:hover {
+  color: rgba(0, 106, 255, 1);
+}
+.woocommerce-widget-layered-nav-list__item > a:hover + .count {
+  background: rgba(0, 106, 255, 1);
+  color: #ffffff;
+}
+
+.widget_layered_nav_filters .chosen {
+  color: #ffffff;
+  background: rgba(0, 106, 255, 1);
+}
+
+.woocommerce-cart-form__contents .product-name a:hover,
+.wishlist_table .product-name a:hover {
+  color: rgba(0, 106, 255, 1);
+}
+
+.coupon button {
+  color: #ffffff;
+  background: rgba(0, 106, 255, 1);
+}
+
+button[name="calc_shipping"] {
+  color: #ffffff;
+  background: rgba(0, 106, 255, 1);
+}
+
+.cart_totals .checkout-button {
+  color: #ffffff;
+  background: rgba(0, 106, 255, 1);
+}
+
+.woocommerce-form-coupon button[name="apply_coupon"] {
+  color: #ffffff;
+  background: rgba(0, 106, 255, 1);
+}
+
+.woocommerce-shipping-fields input:focus,
+.woocommerce-billing-fields input:focus,
+.woocommerce-form-login input:focus,
+.woocommerce-form-register input:focus,
+.woocommerce-form-coupon input:focus,
+.woocommerce-address-fields input:focus,
+.woocommerce-EditAccountForm input:focus {
+  border-color: rgba(0, 106, 255, 1);
+}
+
+.woocommerce-additional-fields textarea:focus {
+  border-color: rgba(0, 106, 255, 1);
+}
+
+button[name="woocommerce_checkout_place_order"] {
+  color: #ffffff;
+  background: rgba(0, 106, 255, 1);
+}
+
+.woocommerce-table--order-details .product-name a:hover {
+  color: rgba(0, 106, 255, 1);
+}
+
+.woocommerce-MyAccount-navigation-link:hover {
+  color: rgba(0, 106, 255, 1);
+}
+
+.woocommerce-orders-table .woocommerce-orders-table__cell-order-number a {
+  color: rgba(0, 106, 255, 1);
+}
+
+.woocommerce-account .woocommerce-Address-title a {
+  color: rgba(0, 106, 255, 1);
+}
+
+.woocommerce-review__verified.verified {
+  background: rgba(243, 245, 249, 1);
+}
+
+.woocommerce-form-login button[name="login"],
+.woocommerce-form-register button[name="register"] {
+  color: #ffffff;
+  background: rgba(0, 106, 255, 1);
+}
+
+.woocommerce-address-fields button[name="save_address"],
+.woocommerce-EditAccountForm button[name="save_account_details"] {
+  color: #ffffff;
+  background: rgba(0, 106, 255, 1);
+}
+
+.woocommerce-form-coupon-toggle .showcoupon,
+.woocommerce-form-login-toggle .showlogin,
+.lost_password a,
+.exp-wc-product-share-icons .custom-share-button,
+.yith-wcwl-share a {
+  color: rgba(3, 27, 79, 1);
+}
+
+.exponent-cart-count {
+  background: rgba(0, 106, 255, 1);
+  color: #ffffff;
+}
+
+/**
+ * Portfolio details btn
+ */
+.be-portfolio-details .mediumbtn {
+  background: rgba(0, 106, 255, 1);
+  color: #ffffff;
+}
+
+.home-grid-icon:hover span {
+  background: rgba(0, 106, 255, 1);
+}
+h1, .h1 {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 46px;
+  text-transform: none;
+  letter-spacing: -0.014em;
+  line-height: 60px;
+  color: #343638;
+}
+h2, .h2 {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 40px;
+  text-transform: none;
+  letter-spacing: -0.01em;
+  line-height: 54px;
+  color: #343638;
+}
+h3,
+.h3 {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 32px;
+  text-transform: none;
+  letter-spacing: -0.01em;
+  line-height: 46px;
+  color: #343638;
+}
+h4,
+.h4 {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 24px;
+  text-transform: none;
+  letter-spacing: -0.01em;
+  line-height: 36px;
+  color: #343638;
+}
+h5,
+.exp-wc-cart-collaterals-inner .cart_totals h2,
+.woocommerce-billing-fields h3,
+.exp-wc-cart-title,
+#ship-to-different-address,
+.woocommerce-customer-details .woocommerce-column__title,
+.woocommerce-account.woocommerce-edit-address h3,
+#order_review_heading,
+.exp-posts-nav-post-title,
+.h5 {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 17px;
+  text-transform: none;
+  letter-spacing: -0.01em;
+  line-height: 30px;
+  color: #343638;
+}
+h6,
+.testimonial-author-role.h6-font,
+.menu-card-title,
+.menu-card-item-price,
+.slider-counts,
+.woocommerce-mini-cart__total strong,
+.variations .label,
+.exp-wc-meta-label,
+.exp-wc-shop-attribute-label,
+.cart_totals h2,
+.woocommerce-orders-table th,
+.upsells > h2,
+.related > h2,
+.woocommerce-table--order-details thead th,
+.woocommerce-orders-table a,
+.wc_payment_method label,
+.woocommerce-checkout-review-order thead th,
+.wishlist_table th,
+.exp-wc-product-share-label,
+.yith-wcwl-share-title,
+.woocommerce-Reviews #reply-title,
+.woocommerce-checkout-review-order tfoot .woocommerce-Price-amount,
+.stock,
+.woocommerce-table--order-details tfoot .woocommerce-Price-amount,
+.woocommerce-Address-title a,
+.wc-tabs,
+.exp-wc-review-author,
+a.bbp-forum-title,
+#bbpress-forums fieldset.bbp-form label,
+.bbp-topic-title a.bbp-topic-permalink,
+#bbpress-forums ul.forum-titles li,
+#bbpress-forums ul.bbp-replies li.bbp-header,
+.h6 {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 15px;
+  text-transform: none;
+  letter-spacing: -0.01em;
+  line-height: 26px;
+  color: #343638;
+}
+body,
+.special-heading-wrap .caption-wrap .body-font,
+.body {
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  text-transform: none;
+  letter-spacing: 0;
+  line-height: 28px;
+  color: #77797d;
+}
+.exp-countdown-wrap .countdown-amount {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 50px;
+  line-height: 2;
+  letter-spacing: 0;
+  font-weight: 400;
+  font-style: normal;
+}
+.exp-countdown-wrap .countdown-period {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 15px;
+  line-height: 1.7em;
+  letter-spacing: 0;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: none;
+}
+.widget_recent_comments a,
+.widget_rss .rsswidget,
+.widget_rss cite,
+.cart_totals th,
+.woocommerce-checkout-review-order-table tfoot th,
+.woocommerce-table--order-details tfoot th,
+.exp-recent-posts-widget-post-title,
+.widget_recent_entries a,
+.h7 {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 14px;
+  text-transform: none;
+  letter-spacing: -0.01em;
+  line-height: 22px;
+  color: #343638;
+}
+.h8 {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 12px;
+  text-transform: none;
+  letter-spacing: 0;
+  line-height: 16px;
+  color: rgba(0, 0, 0, 0.45);
+}
+.exp-posts-nav-post-location,
+.exp-read-more-underlined,
+.pages_list a,
+.h9 {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 14px;
+  color: rgba(0, 0, 0, 0.45);
+}
+.body_1 {
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  text-transform: none;
+  letter-spacing: 0;
+  line-height: 25px;
+  color: #848991;
+}
+.body_2 {
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  text-transform: none;
+  letter-spacing: 0;
+  line-height: 32px;
+  color: #848991;
+}
+blockquote,
+.quote {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 21px;
+  text-transform: none;
+  letter-spacing: -0.01em;
+  line-height: 35px;
+  color: #343638;
+}
+.exp-post-entry-title {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 32px;
+  text-transform: none;
+  letter-spacing: -0.01em;
+  line-height: 46px;
+  color: #343638;
+}
+.exp-posts-nav-post-title {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 17px;
+  text-transform: none;
+  letter-spacing: 0;
+  line-height: 30px;
+  color: #343638;
+}
+.tatsu-button,
+input[type="submit"],
+button[type="submit"],
+.cart_totals a.checkout-button {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.smallbtn,
+.exp-success-message__content a {
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.mediumbtn,
+input[type="submit"],
+div.wpforms-container-full
+  .wpforms-form
+  .wpforms-submit-container
+  button[type="submit"],
+.woocommerce-mini-cart__buttons a,
+.woocommerce-address-fields button[name="save_address"],
+.woocommerce-EditAccountForm button[name="save_account_details"],
+.exp-quick-view,
+.single_add_to_cart_button,
+.coupon button,
+button[name="calc_shipping"],
+.woocommerce-form-coupon button[name="apply_coupon"],
+.woocommerce-form-login button[name="login"],
+.woocommerce-form-register button[name="register"] {
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.largebtn,
+.cart_totals .checkout-button,
+button[name="woocommerce_checkout_place_order"] {
+  font-size: 13px;
+  line-height: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.x-largebtn {
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.tatsu-button-wrap.blockbtn .tatsu-button,
+.tatsu-button.blockbtn {
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.tatsu-animated-link-inner {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 12px;
+  line-height: 12px;
+  color: #343638;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: uppercase;
+}
+.exp-form input:not([type="submit"]),
+.exp-form textarea,
+.exp-form select,
+input,
+select,
+textarea,
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__rendered,
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__rendered {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 15px;
+  line-height: 1.7em;
+  color: #343638;
+  letter-spacing: 0;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: none;
+}
+.exp-form label,
+.exp-form ::-webkit-input-placeholder,
+.exp-searchform-icon {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 15px;
+  line-height: 1.7em;
+  color: rgba(0, 0, 0, 0.45);
+  letter-spacing: 0;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: none;
+}
+.exp-posts-loop .exp-post-title {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 35px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 46px;
+  color: #343638;
+  letter-spacing: -0.01em;
+  text-transform: none;
+}
+.be-grid .exp-post-title {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 34px;
+  color: #343638;
+  letter-spacing: -0.01em;
+  text-transform: none;
+}
+.exp-posts-loop .exp-post-content {
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  color: #848991;
+  letter-spacing: 0;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: none;
+}
+.exp-posts-loop .exp-post-categories,
+.exp-posts-loop.exp-posts-loop-style3 .exp-post-categories-labeled,
+.exp-posts-loop.exp-posts-loop-style7 .exp-post-categories-labeled {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.45);
+  letter-spacing: 1px;
+}
+.exp-posts-loop .exp-post-author {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 13px;
+  line-height: 1;
+  font-weight: 500;
+  font-style: normal;
+  color: rgba(0, 0, 0, 0.45);
+  letter-spacing: 0;
+  text-transform: capitalize;
+}
+.exp-posts-loop .exp-post-date,
+.exp-posts-loop .exp-post-date-with-icon {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 13px;
+  line-height: 1;
+  font-weight: 500;
+  font-style: normal;
+  color: rgba(0, 0, 0, 0.45);
+  letter-spacing: 0;
+  text-transform: none;
+}
+.exp-recent-posts .exp-post-title {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 34px;
+  color: #343638;
+  letter-spacing: -0.01em;
+  text-transform: none;
+}
+.exp-featured-posts .exp-post-title {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 35px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 48px;
+  color: #343638;
+  letter-spacing: -0.01em;
+  text-transform: none;
+}
+.exp-related-posts .exp-post-title {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 34px;
+  color: #343638;
+  letter-spacing: -0.01em;
+  text-transform: none;
+}
+.exp-post-single-header .exp-post-title,
+.exp-category-header-title {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 46px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 58px;
+  color: #343638;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.exp-post-single-content {
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 17px;
+  line-height: 30px;
+  color: #848991;
+  letter-spacing: 0;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: none;
+}
+.exp-post-single-header .exp-post-categories {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 12px;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.45);
+  font-weight: 500;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.exp-post-single-header .exp-post-author {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 500;
+  font-style: normal;
+  color: rgba(0, 0, 0, 0.45);
+  letter-spacing: 0;
+  text-transform: capitalize;
+}
+.exp-post-single-header .exp-post-date,
+.exp-post-single-header .exp-post-date-with-icon {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 500;
+  font-style: normal;
+  color: rgba(0, 0, 0, 0.45);
+  letter-spacing: 0;
+  text-transform: none;
+}
+.exp-post-single-footer-author-name {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 17px;
+  line-height: 30px;
+  color: #343638;
+  letter-spacing: 0;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: none;
+}
+.exp-post-single-footer-author-description {
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  color: #888c92;
+  letter-spacing: 0;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: none;
+}
+.exp-sidebar h6 {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1;
+  text-transform: none;
+  color: #343638;
+  letter-spacing: 25px;
+}
+.exp-sidebar {
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 28px;
+  text-transform: none;
+  color: #848991;
+  letter-spacing: 0;
+}
+.products .exp-product-title,
+.grouped_form a,
+.woocommerce-cart-form__contents .product-name a,
+.wishlist_table .product-name a,
+.woocommerce-checkout-review-order td.product-name,
+.woocommerce-table--order-details td.product-name,
+.exp-wc-cart-product-title {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 30px;
+  text-transform: none;
+  color: #343638;
+  letter-spacing: -0.005em;
+}
+.products .exp-wc-loop-price,
+.woocommerce-mini-cart__total .woocommerce-Price-amount,
+.grouped_form .woocommerce-Price-amount,
+.woocommerce-table--order-details td.woocommerce-table__product-total,
+.woocommerce-cart-form__contents .product-subtotal,
+.woocommerce-checkout-review-order td.product-total {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 18px;
+  text-transform: none;
+  color: #343638;
+  letter-spacing: 0;
+}
+.products .exp-wc-loop-price del,
+.grouped_form del .woocommerce-Price-amount {
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 16px;
+  text-transform: none;
+  color: rgba(0, 0, 0, 0.45);
+  letter-spacing: 0;
+}
+.products .exp-product-categories {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.45);
+  letter-spacing: 1px;
+}
+.products .exp-wc-price-cart-wrap .exp-add-to-cart {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0;
+}
+.products .onsale {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.product_title {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 35px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 48px;
+  text-transform: none;
+  color: #343638;
+  letter-spacing: 0;
+}
+.exp-wc-single-price,
+.woocommerce-variation-price {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 26px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 35px;
+  text-transform: none;
+  color: #343638;
+  letter-spacing: 0;
+}
+.exp-wc-single-price del {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 35px;
+  text-transform: none;
+  color: rgba(0, 0, 0, 0.45);
+  letter-spacing: 0;
+}
+.exp-wc-meta-value {
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 30px;
+  text-transform: none;
+  color: #848991;
+  letter-spacing: 0;
+}
+.thumb-title-wrap .thumb-title,
+.full-screen-portfolio-overlay-title {
+  font-size: 24px;
+  line-height: 34px;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: none;
+  letter-spacing: -0.005em;
+}
+.thumb-title-wrap .portfolio-item-cats {
+  font-size: 12px;
+  line-height: 17px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+h6.gallery-side-heading {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.be-portfolio-details .gallery-side-heading-wrap p {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.be-portfolio-wrap .portfolio-filter_item {
+  color: #343638;
+  font-size: 12px;
+  line-height: 30px;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+@media only screen and (max-width: 1377px) {
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+}
+@media only screen and (max-width: 767px) {
+}
+.swatch-red,
+.swatch-red a {
+  color: #f44336;
+}
+.swatch-pink,
+.swatch-pink a {
+  color: #e91e63;
+}
+.swatch-purple,
+.swatch-purple a {
+  color: #9c27b0;
+}
+.swatch-deep-purple,
+.swatch-deep-purple a {
+  color: #673ab7;
+}
+.swatch-indigo,
+.swatch-indigo a {
+  color: #3f51b5;
+}
+.swatch-blue,
+.swatch-blue a {
+  color: #2196f3;
+}
+.swatch-light-blue,
+.swatch-light-blue a {
+  color: #03a9f4;
+}
+.swatch-cyan,
+.swatch-cyan a {
+  color: #00bcd4;
+}
+.swatch-teal,
+.swatch-teal a {
+  color: #009688;
+}
+.swatch-green,
+.swatch-green a {
+  color: #4caf50;
+}
+.swatch-light-green,
+.swatch-light-green a {
+  color: #8bc34a;
+}
+.swatch-lime,
+.swatch-lime a {
+  color: #cddc39;
+}
+.swatch-yellow,
+.swatch-yellow a {
+  color: #ffeb3b;
+}
+.swatch-amber,
+.swatch-amber a {
+  color: #ffc107;
+}
+.swatch-orange,
+.swatch-orange a {
+  color: #ff9800;
+}
+.swatch-deep-orange,
+.swatch-deep-orange a {
+  color: #ff5722;
+}
+.swatch-brown,
+.swatch-brown a {
+  color: #795548;
+}
+.swatch-grey,
+.swatch-grey a {
+  color: #9e9e9e;
+}
+.swatch-blue-grey,
+.swatch-blue-grey a {
+  color: #607d8b;
+}
+.swatch-white,
+.swatch-white a {
+  color: #ffffff;
+}
+.swatch-black,
+.swatch-black a {
+  color: #000000;
+}
+.palette-0,
+.palette-0 a {
+  color: rgba(0, 106, 255, 1);
+}
+.palette-1,
+.palette-1 a {
+  color: #ffffff;
+}
+.palette-2,
+.palette-2 a {
+  color: rgba(3, 27, 79, 1);
+}
+.palette-3,
+.palette-3 a {
+  color: rgba(3, 27, 79, 1);
+}
+.palette-4,
+.palette-4 a {
+  color: rgba(243, 245, 249, 1);
+}
+.exp-post-single-header-wide::after {
+  background-image: url(https://platerecognizer.com/wp-content/uploads/2020/07/top-bg.jpg);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: top left;
+  background-size: cover;
+}
+
+.my-ul-li li {
+  background: url("../images/anpr/features-img/li-mark.png");
+  background-repeat: no-repeat;
+  background-size: 25px;
+}
+
+.home-one .tatsu-section-background {
+  background: url("../images/anpr/backgrounds/greater1344.svg") !important;
+  background-repeat: no-repeat !important;
+  background-attachment: scroll !important;
+  background-position: center center !important;
+  background-size: cover !important;
+}
+
+@media (max-width: 1344px) {
+  .home-one .tatsu-section-background {
+    background: url("../images/anpr/backgrounds/lessthan1344.svg") !important;
+    background-repeat: no-repeat !important;
+    background-attachment: scroll !important;
+    background-position: center center !important;
+    background-size: cover !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-one .tatsu-section-background {
+    background: url("../images/anpr/backgrounds/lessthan768.svg") !important;
+    background-repeat: no-repeat !important;
+    background-attachment: scroll !important;
+    background-position: center center !important;
+    background-size: cover !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .home-one .tatsu-section-background {
+    background: url("../images/anpr/backgrounds/lessthan420.svg") !important;
+    background-repeat: no-repeat !important;
+    background-attachment: scroll !important;
+    background-position: center center !important;
+    background-size: cover !important;
+  }
+}
+
+.pr-table-adj tbody tr td:nth-child(2),
+tbody tr th:nth-child(2) {
+  width: 45%;
+}
+
+.pr-table-adj table {
+  width: 50%;
+}
+
+@media (max-width: 600px) {
+  .pr-table-adj table {
+    width: 100%;
+  }
+}
+
+.tatsu-menu li:not(.mega-menu) .tatsu-sub-menu {
+  width: 230px !important;
+}
+
+.kbe_search_field {
+  margin-top: 30px;
+  max-width: 1200px;
+}
+
+div#kbe_container {
+  max-width: 1160px;
+}
+
+@media (max-width: 1159px) {
+  div#kbe_container {
+    max-width: 90%;
+  }
+}
+
+#kbe_content .kbe_leftcol .kbe_article_list li {
+  background: url(https://platerecognizer.com/wp-content/uploads/2020/07/li-mark.png);
+  background-repeat: no-repeat;
+  background-size: 25px;
+  margin: 0 0 20px;
+  padding: 0 0 0 38px;
+  line-height: 25px;
+}
+
+#kbe_content .kbe_leftcol .kbe_article_list li a {
+  font-size: 16px;
+  color: rgba(0, 106, 255, 1);
+}
+
+#kbe_content .kbe_category h2 a {
+  text-align: left;
+  line-height: 100%;
+  color: #031b4f;
+  font-family: "Sailec-Bold";
+  font-weight: normal;
+  letter-spacing: normal;
+}
+
+#kbe_content .kbe_leftcol p {
+  font-weight: normal;
+  font-size: 18px;
+  color: #5b6987;
+  text-transform: none;
+  letter-spacing: 0;
+  line-height: 28px;
+}
+
+#kbe_container h1 {
+  color: #031b4f;
+  margin: 0 0 0px;
+  font-family: "Sailec-Medium";
+  font-weight: normal;
+  font-size: 27px;
+}
+
+div#kbe_container {
+  margin-bottom: 70px;
+}
+
+#kbeheader {
+  content: "Knowledge Base";
+  font-family: "Sailec-Bold";
+  font-weight: normal;
+  letter-spacing: normal;
+  color: #fff;
+  margin: 0 0 25px;
+  text-align: center;
+  font-size: 52px;
+  background: url(https://platerecognizer.com/wp-content/uploads/2020/10/ALPR-ANPR-background.jpg);
+  display: block;
+  position: relative;
+  left: 0;
+  width: 100%;
+  max-width: 100% !important;
+  padding: 70px 0px 70px 0px;
+}
+
+@media only screen and (max-width: 1200px) {
+  #kbeheader {
+    font-size: 48px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  #kbeheader {
+    font-size: 40px;
+  }
+}
+@media only screen and (max-width: 959px) {
+  #kbeheader {
+    font-size: 32px;
+    line-height: 45px;
+  }
+}
+@media (max-width: 767px) {
+  #kbeheader {
+    font-size: 30px;
+    line-height: 35px;
+  }
+}
+
+.kbe_articles ul li {
+  background: url(https://platerecognizer.com/wp-content/uploads/2020/07/li-mark.png);
+  background-repeat: no-repeat;
+  background-size: 25px;
+  margin: 0 0 20px;
+  padding: 0 0 0 38px;
+  line-height: 25px;
+}
+
+#kbe_content .kbe_leftcol .kbe_articles ul li a {
+  font-size: 16px;
+  color: rgba(0, 106, 255, 1);
+}
+
+#search-result li {
+  background-image: url(https://platerecognizer.com/wp-content/uploads/2020/07/li-mark.png);
+  background-size: 22px;
+}
+
+#kbe_content .kbe_leftcol .kbe_articles ul li a {
+  font-size: 16px;
+  color: rgba(0, 106, 255, 1);
+}
+
+.post-type-archive-kbe_knowledgebase
+  .tatsu-menu
+  > ul
+  > li.current_page_parent
+  > a,
+.tatsu-menu ul.tatsu-sub-menu li.current-page-ancestor a {
+  color: rgba(3, 27, 79, 1);
+}
+
+.post-type-archive-kbe_knowledgebase
+  li.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-1286
+  a {
+  color: rgba(0, 106, 255, 1);
+}
+
+.post-type-archive-kbe_knowledgebase .menu-item-321 a {
+  color: rgba(3, 27, 79, 1) !important;
+}
+
+.post-type-archive-kbe_knowledgebase .menu-item-1286 a {
+  color: rgba(0, 106, 255, 1) !important;
+}
+
+.tax-kbe_taxonomy .menu-item-321 a {
+  color: rgba(3, 27, 79, 1) !important;
+}
+
+.tax-kbe_taxonomy .menu-item-1286 a {
+  color: rgba(0, 106, 255, 1) !important;
+}
+
+.kbe_knowledgebase-template-default .menu-item-321 a {
+  color: rgba(3, 27, 79, 1) !important;
+}
+
+.kbe_knowledgebase-template-default .menu-item-1286 a {
+  color: rgba(0, 106, 255, 1) !important;
+}
+
+.kbe_breadcrum ul li a {
+  color: #5b6987;
+}
+
+ul#search-result {
+  background: #f3f5f9;
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+}
+
+#search-result li {
+  background-color: #f3f5f9;
+  border-right: none !important;
+  border-left: none;
+}
+#search-result li:hover {
+  background-color: white;
+}
+
+.pld-like-dislike-wrap .pld-common-wrap {
+  font-size: 20px;
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #f6f6f6;
+  border-radius: 2px;
+  font-weight: 700;
+  padding: 6px 20px 6px 20px;
+  position: relative;
+  margin-right: 10px;
+  color: black;
+}
+
+.pld-like-dislike-wrap .pld-common-wrap:hover {
+  background: #006aff;
+}
+
+.pld-like-dislike-wrap .pld-common-wrap:hover i {
+  color: white;
+}
+
+#kbe_content .kbe_leftcol span {
+  display: inline;
+}
+
+.pld-like-wrap.pld-common-wrap:hover span.pld-like-count-wrap.pld-count-wrap {
+  color: white !important;
+}
+
+.pld-dislike-wrap.pld-common-wrap:hover
+  span.pld-dislike-count-wrap.pld-count-wrap {
+  color: white !important;
+}
+
+#kbe_content .kbe_leftcol h3 {
+  text-align: left;
+}
+
+/* #kbe_content .kbe_leftcol a {
+} */
+
+.yarpp-related li {
+  background: url(https://platerecognizer.com/wp-content/uploads/2020/07/li-mark.png);
+  background-repeat: no-repeat;
+  background-size: 25px;
+  margin: 0 0 20px;
+  padding: 0 0 0 38px;
+  line-height: 25px;
+  list-style: none;
+}
+
+.yarpp-related a {
+  font-size: 16px;
+  color: rgba(0, 106, 255, 1) !important;
+  font-weight: normal;
+}
+
+.yarpp-related ol {
+  margin-left: 0px !important;
+}
+
+#kbe_content .kbe_leftcol .yarpp-related ol {
+  padding-left: 0px;
+}
+
+#kbe_content .kbe_leftcol a {
+  color: rgba(0, 106, 255, 1);
+}
+
+.kbe_category {
+  margin-right: 0px;
+  margin-left: 0px;
+  width: 50%;
+  padding-left: 35px;
+  padding-right: 30px;
+}
+
+div#live-search {
+  padding-right: 30px;
+  padding-left: 35px;
+}
+
+.kbe_breadcrum {
+  padding-left: 35px;
+  padding-right: 30px;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 640px) {
+  .kbe_content_full .kbe_category {
+    width: 50% !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .kbe_content_full .kbe_category {
+    width: 100% !important;
+  }
+
+  .kbe_category {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  div#live-search {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+
+  .kbe_breadcrum,
+  #kbe_content {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+#kbe_content .kbe_leftcol h2 {
+  background-image: none !important;
+}
+
+#kbe_container .tatsu-section-pad {
+  padding-top: 20px !important;
+  padding-bottom: 30px !important;
+}
+
+#kbe_container .tatsu-section-pad .tatsu-wrap {
+  margin-left: 0 !important;
+}
+
+.likedislikehead {
+  margin-top: 20px;
+}
+
+.dataTables_wrapper .tablepress {
+  clear: both;
+  margin: 0 auto 1em !important;
+}
+
+
+
+/* ---------------------------------------------------------- */
+/* ---------------------------------------------------------- */
+/* ---------------------------------------------------------- */
+/* ---------------------------------------------------------- */
+/* ---------------------------------------------------------- */
+/* ---------------------------------------------------------- */
+/* ---------------------------------------------------------- */
+/* ---------------------------------------------------------- */
+/* ---------------------------------------------------------- */
+/* ---------------------------------------------------------- */
+/* ---------------------------------------------------------- */
+/* ---------------------------------------------------------- */
+/* ---------------------------------------------------------- */
+/* ---------------------------------------------------------- */
+/* ---------------------------------------------------------- */
+/* ---------------------------------------------------------- */
+/* ---------------------------------------------------------- */
+/* ---------------------------------------------------------- */
+/* ---------------------------------------------------------- */
+/* ---------------------------------------------------------- */
+/* ---------------------------------------------------------- */
+/* ---------------------------------------------------------- */
+/* ---------------------------------------------------------- */
+/* ---------------------------------------------------------- */
+/* ---------------------------------------------------------- */
+/* ---------------------------------------------------------- */
+/* ---------------------------------------------------------- */
+/* ---------------------------------------------------------- */
+/* ---------------------------------------------------------- */
+/* ---------------------------------------------------------- */
+/* ---------------------------------------------------------- */
+
+
+.rll-youtube-player, [data-lazy-src] {
+  display: none !important;
+}
+
+img.wp-smiley,
+img.emoji {
+  display: inline !important;
+  border: none !important;
+  box-shadow: none !important;
+  height: 1em !important;
+  width: 1em !important;
+  margin: 0 0.07em !important;
+  vertical-align: -0.1em !important;
+  background: none !important;
+  padding: 0 !important;
+}
+
+#kbe_content h2 span.kbe_count, #kbe_content .kbe_child_category h3 span.kbe_count {
+  background-color: #006aff !important;
+}
+
+.kbe_widget .kbe_tags_widget a, .kbe_widget .kbe_tags_widget a:hover {
+  text-decoration: underline;
+  color: #006aff !important;
+}
+
+.fluid-width-video-wrapper {
+  width: 100%;
+  position: relative;
+  padding: 0;
+}
+
+.fluid-width-video-wrapper iframe,
+.fluid-width-video-wrapper object,
+.fluid-width-video-wrapper embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+iframe #_hjRemoteVarsFrame {
+  display: none !important;
+  width: 1px !important;
+  height: 1px !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+

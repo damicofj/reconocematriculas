@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en_us">
+  <head>
+    <!-- Bootstrap CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <!-- Bootstrap CSS local fallback -->
+    <script>
+      var test = document.createElement("div");
+      test.className = "hidden d-none";
+
+      document.head.appendChild(test);
+      var cssLoaded = window.getComputedStyle(test).display === "none";
+      document.head.removeChild(test);
+
+      if (!cssLoaded) {
+        var link = document.createElement("link");
+
+        link.type = "text/css";
+        link.rel = "stylesheet";
+        link.href = "assets/css/bootstrap.min.css";
+
+        document.head.appendChild(link);
+      }
+    </script>
+    <link
+      async=""
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body style="background-color: #6c757d; color: white; overflow: hidden">
+    <div class="text-center">
+      <form
+        action="/alpr-demo"
+        method="POST"
+        enctype="multipart/form-data"
+        target="_parent"
+      >
+        <input
+          type="hidden"
+          name="csrfmiddlewaretoken"
+          value="bYgIDyKBTnZPRal31pJJUMvI4J1vtAx3fbezze6SZrnUoL5IxU5c8ku5pLhG2PgV"
+        />
+        <input
+          id="file"
+          name="upload"
+          type="file"
+          onchange="submit();"
+          accept=".jpg,.git,.png,.jpeg,image/*"
+          style="font-size: 12px; width: 180px; display: none"
+        />
+      </form>
+
+      <button class="btn btn-secondary" onclick="thisFileUpload();">
+        <i class="fa fa-cloud-upload"></i> Subir Imagen
+      </button>
+    </div>
+    <script>
+      function thisFileUpload() {
+        document.getElementById("file").click();
+      }
+
+      function submit() {
+        document.getElementsByTagName("form").submit();
+      }
+    </script>
+  </body>
+</html>
